@@ -9,15 +9,17 @@
 %\title{Math 453 HW 1}
 \documentclass[addpoints]{exam}
 
-\usepackage{amsmath,enumitem,wrapfig}
+\usepackage{amsmath,enumitem,wrapfig,amsfonts}
+\usepackage{physics}
 \usepackage{tikz}
 
 \newcommand{\StudentName}{Sabarno Saha - 22MS037}
-\newcommand{\AssignmentName}{HW <No>}
+\newcommand{\AssignmentName}{Assignement 3}
+\newcommand{\subjectcode}{PH2101}
 
 \pagestyle{headandfoot}
 \runningheadrule
-\runningheader{SB1101}{\StudentName}{\AssignmentName}
+\runningheader{\subjectcode}{\StudentName}{\AssignmentName}
 \firstpagefooter{}{}{\thepage}
 \runningfooter{}{}{\thepage}
 
@@ -27,12 +29,12 @@
 \begin{document}
 
 
-\par\textbf{IISER Kolkata} \hfill \textbf{Assignment <No>}
+\par\textbf{IISER Kolkata} \hfill \textbf{\AssignmentName}
 \vspace{3pt}
 \hrule
 \vspace{3pt}
 \begin{center}
-        \LARGE{\textbf{<Sub Code> 1101 : <Subject>}}
+        \LARGE{\textbf{\subjectcode : Waves and Optics}}
 \end{center}
 \vspace{3pt}
 
@@ -46,77 +48,70 @@
 
 \begin{questions}
 
-\question \textbf{ Question 1}
+\question \textbf{ Question 1}\\
+Consider a dispersion relation $\omega = vk$, where the symbols have their usual meanings. We
+construct a wave packet by choosing sinusoids having a form $e^{i(kx-\omega t)}$ from $-k_0/4$
+to $k_0/4$, with uniform amplitude for any k.\\
+(a) Calculate the shape for the wave packet.
 
 \begin{solution}\\
  
 \end{solution}
 
-\question \textbf{ Question 2}
-
+(b) What is the group velocity of this packet?
 \begin{solution}\\
  
 \end{solution}
 
-\question \textbf{ Question 3}
-
+(c)[Optional] If possible simulate(calculate and animate) and upload how the packet moves with 
+time.
 \begin{solution}\\
  
 \end{solution}
 
-\question \textbf{ Question 4}
-
-\begin{solution}\\
- 
-\end{solution}
-
-
-\question \textbf{ Question 5}
-
-\begin{solution}\\
- 
-\end{solution}
-
-\question \textbf{ Question 6}
-
-\begin{solution}\\
- 
-\end{solution}
-
-\question \textbf{ Question 6}
-
-\begin{solution}\\
- 
-\end{solution}
-
-\question \textbf{ Question 6}
-
-\begin{solution}\\
- 
-\end{solution}
-
-\question \textbf{ Question 6}
-
-\begin{solution}\\
- 
-\end{solution}
-
-\question \textbf{ Question 6}
-
-\begin{solution}\\
- 
-\end{solution}
-
-\question \textbf{ Question 6}
-
+\question \textbf{ Question 2}\\
+Consider a damped harmonic oscillator whose equation of motion is given by,
+\begin{align*}
+    \ddot{x}+\alpha\dot{x}+\omega_0^2x = 0
+\end{align*}
+where symbols carry their usual meanings.\\ 
+(a) Find the solution of the above equation, for given initial conditions $x(0) = x_0$ and 
+$\dot{x}(0) = v_0$.
 \begin{solution}\\
  
 \end{solution}
 
 
+(b) To find the solution for the critically damped case, check the solution at the limit of the 
+vanishing resonance frequency.
+\begin{solution}\\
+ 
+\end{solution}
 
+\question \textbf{ Question 3}\\
+Consider the following Wave equation:
+\begin{align*}
+    \pdv[2]{y}{t} = v^2\pdv[2]{y}{x}
+\end{align*}
+where, $v$ is a constant speed. Check whether this equation is Lorentz invariant. What if
+$v=c$, where c is the speed of light in vacuum.
+\begin{solution}\\
+ 
+\end{solution}
 
+\question \textbf{ Question 4}\\
+Consider a continuous string of length  $L$ whose one end is fixed and the other end is free to
+move (it slide on frictionless rods that pass through massless rings at the end of the string).\\ 
+(a)Construct the equation of motion (you start with a beaded string and take the continuum
+limit)
+\begin{solution}\\
+ 
+\end{solution}
 
+(b)Given that the free end is always at the antinode position, find the possible wavelengths.
+\begin{solution}\\
+ 
+\end{solution}
 
 \end{questions}
 \end{document}
