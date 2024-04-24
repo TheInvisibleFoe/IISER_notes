@@ -1,0 +1,17 @@
+\contentsline {section}{\numberline {1}Data}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Prey Population}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Prey after each generation}{2}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Prey consumed by Predator (Knives/Mouth)}{2}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Prey consumed by Predator (Spoons/Raptorial)}{2}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Prey consumed by predator(Fork/Legs)}{2}{subsection.1.5}%
+\contentsline {section}{\numberline {2}Data Analysis}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Population Growth of Prey}{3}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Population Analysis of White Bean}{3}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Population Analysis of Black Bean}{3}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Population Analysis of Pasta}{4}{subsubsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.2}Prey Preference of each Predator}{4}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Predator using Knives(Mouth)}{4}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Predator using Spoons(Raptorial)}{5}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}\textcolor {purple}{The Most Successful Predator}}{5}{subsubsection.2.2.3}%
+\contentsline {section}{\numberline {3}Questions}{6}{section.3}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

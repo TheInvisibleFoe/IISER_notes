@@ -1,2 +1,2 @@
 # IISER_notes
-Notes and assignments lol
+These are a collection of my notes and assignment, mostly assignments :) 

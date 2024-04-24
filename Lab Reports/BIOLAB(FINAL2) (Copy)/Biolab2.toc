@@ -1,0 +1,12 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Aim}{2}{}%
+\contentsline {section}{\numberline {2}Procedure}{2}{}%
+\contentsline {subsection}{\numberline {2.1}Preparation of Standard Curve}{2}{}%
+\contentsline {subsection}{\numberline {2.2}Estimation of Kinetic Parameters}{2}{}%
+\contentsline {section}{\numberline {3}Data Tables and Graphs}{2}{}%
+\contentsline {subsection}{\numberline {3.1}Data Table to Prepare Standard Absorbance vs pNP Curve}{2}{}%
+\contentsline {subsection}{\numberline {3.2}Table 2(Kinetic Parameters)}{3}{}%
+\contentsline {subsection}{\numberline {3.3}Table 3(Kinetic Parameters)}{3}{}%
+\contentsline {subsection}{\numberline {3.4}Graphs}{4}{}%
+\contentsline {section}{\numberline {4}Calculations and Results}{6}{}%
+\contentsline {section}{\numberline {5}Results}{7}{}%

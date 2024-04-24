@@ -1,0 +1,43 @@
+\contentsline {section}{\numberline {1}What is \textrm {\LaTeX }?}{2}{section.1}%
+\contentsline {section}{\numberline {2}Structure of \texttt {.tex} file}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Document Class}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Preamble}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Main Body}{4}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Document Sectioning}{4}{section.3}%
+\contentsline {section}{\numberline {4}Font Style, Size and Color}{5}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Font Style}{5}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Font Size}{6}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Font Color}{6}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Math}{7}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Important Functions}{7}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Greek Symbols}{8}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}{\AmSfont A\kern -.1667em\lower .5ex\hbox {M}\kern -.125emS}{} packages}{8}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}Environments}{8}{subsubsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.2}AMS Fonts}{9}{subsubsection.5.3.2}%
+\contentsline {paragraph}{Math Symbols}{9}{section*.5}%
+\contentsline {subsection}{\numberline {5.4}Physics Package}{10}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}Automatic bracing}{10}{subsubsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.2}Vectors}{10}{subsubsection.5.4.2}%
+\contentsline {subsubsection}{\numberline {5.4.3}Derivatives or Partial Derivatives}{10}{subsubsection.5.4.3}%
+\contentsline {subsubsection}{\numberline {5.4.4}Matrices}{12}{subsubsection.5.4.4}%
+\contentsline {section}{\numberline {6}Images, Floats, Captions}{12}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Adding Multiple Images}{13}{subsection.6.1}%
+\contentsline {section}{\numberline {7}Lists}{16}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Unordered List}{16}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Ordered List}{16}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Nested Lists}{17}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Custom Labels}{18}{subsection.7.4}%
+\contentsline {section}{\numberline {8}Table}{18}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Column and Row borders}{19}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Merged Rows and Columns}{20}{subsection.8.2}%
+\contentsline {section}{\numberline {9}Adding Bibliography}{21}{section.9}%
+\contentsline {section}{\numberline {10}Extra Useful Packages}{21}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Geometry}{21}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Hyperref}{22}{subsection.10.2}%
+\contentsline {subsubsection}{\numberline {10.2.1}Hyperlinks}{22}{subsubsection.10.2.1}%
+\contentsline {subsubsection}{\numberline {10.2.2}Cross Referencing}{22}{subsubsection.10.2.2}%
+\contentsline {subsubsection}{\numberline {10.2.3}PDF Metadata}{23}{subsubsection.10.2.3}%
+\contentsline {subsubsection}{\numberline {10.2.4}Customizing Link Colors}{23}{subsubsection.10.2.4}%
+\contentsline {subsection}{\numberline {10.3}tcolorbox, mdframed}{23}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}tikz, pgfplots}{23}{subsection.10.4}%
+\contentsline {section}{\numberline {11}Appendix}{30}{section.11}%
