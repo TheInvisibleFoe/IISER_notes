@@ -1,6 +1,7 @@
 #import "template.typ": *
 #import "@preview/physica:0.9.1": *
 #import "@preview/ctheorems:1.1.2": * 
+
 #show: thmrules
 #show: super-T-as-transpose // put in a #[...] to limit its scope...
 #show: super-plus-as-dagger // ...or use scripts() to manually override
@@ -20,215 +21,131 @@
 #let vb(ip) = {$bold(hat(ip))$}
 #let br(ip) = {$|#to-string(ip.join(",")) angle.r$}
 
+#set math.mat(delim: "[")
 #set align(left)
 
-= Perturbing the Infinite square well lol
+= Perturbing the Infinite square well
+
+  The unperturbed problem is $H_0$ is given as $H_0 = hat(p)^2/(2m) + V'(x)$, where 
+  $ V'(x) = cases(0 quad x:0<x<a, oo quad text("elsewhere")) $
+  The perturbation $V$ is given in the problem as
+  $ V(x) = cases(V_0 quad x: a/2<x<(3 a)/2, 0 quad text("elsewhere")) $
+  The energy eigenvalues and eigenfunctions to $H_0$ are given as
+  #nonum($ E_n = (n^2 pi^2 hbar^2)/(2 m a^2 )quad ,quad  psi_n^((0)) = sqrt(2/a) sin((n pi x)/a)  $)
 #answer[
- There are 2 independent spins $arrow(S)_1$, $arrow(S)_2$ which have two independent Hilbert spaces 
-  assosciated with them. Thus this systems having 2 spins will be described by the tensor product of both 
-  Hilbert spaces giving us the labelling $|S_1,m_S_1 angle.r$ and $|S_2,m_S_2 ar$. Thus to label all 
-  the states of the system we need 4 eigenstates.
+  Considering the nature of the perturbation, the ground state energy should increase to accomdate the perturbation. Since $V_0>0$, the particle in its ground state should have higher energy. The peak of the ground state takes place at $x=a\/2$. Since there is a higher potential at $x=a\/2$, the peak which is proportional to the pdf at $x=a\/2$, will decrease since the addition of a higher potential near it would decrease the pdf and thereafter the peak.
+]
+#answer[
+  We now calculate the first order correction to the ground state energy. The first order correction is given as 
+   $ E_1^((1))= bra(psi_1^((0)))V ket(psi_1^((0))) = 2/a V_0 integral_(a/3)^((2a)/3) 
+   sin^2((pi x)/a) d x = [(2 pi + 3^(3/2))/(6 pi)] V_0 = [1/3 + sqrt(3)/(2 pi) ]V_0   $
+]
+#answer[
   
 ]
 #answer[
-  The hamiltonian is given as 
-  $ hat(H)  &= J vb(S)_1 dot vb(S)_2 \
-            &= J/2[vb(S)_(t o t)^2 - vb(S)_1^2 - vb(S)_2^2]
-  $
-  Let us write our eigenstates $|S_1, m_S_1 ar tc|S_2, m_S_2 ar$ as the tensor product of the eigenstates with the good quantum numbers. 
-
 ]
 #answer[
-  Since the Spin operators $vb(S)_1$ and $vb(S)_2$ acts on independent Hilbert spaces, the operators are
-  independent of each other. We thus have $[op(S)_(1 i),S_(2 j)] = 0 $ where $i,j in{x,y,z}$. This gives us the 
-  commutation relations $[vb(S)_(t o t), vb(S)_i] =0, i in {1,2}$. Thus we see that $hat(S)_(t o t), hat(S)_1$ and
-  $hat(S)_2$ all commute with the Hamiltonian, giving us 
-  $ [H,hat(S)_(t o t)] = [H,hat(S)_1] = [H,hat(S)_2] =0 $. 
-  We know that we need 4 operators to form a Complete Set of Commuting Observables(CSCO). Let us define
-  $hat(S)_z = hat(S)_(1 z) + hat(S)_(2 z)$. We know that Spin angular momentum also follows total angular momentum
-  commutation relations. From the addition of angular momenta relations, we get
-  $ &[vb(S)_(t o t)^2, S_z]= 0 \
-  => &[H, S_z] = 0 $
-  Let us denote our eigenstates as $| s, m_s; s_1, s_1 ar$ where we have 
-  $ 
-    vb(S)_(t o t)^2|s, m_s; s_1, s_2 ar &= s(s+1)hbar^2|s, m_s; s_1, s_2 ar\
-    vb(S)_1^2|s, m_s; s_1, s_2 ar &= s_1(s_1+1)hbar^2|s, m_s; s_1, s_2 ar = 3/4 hbar^2|s, m_s; s_1, s_2 ar\ 
-    vb(S)_2^2|s, m_s; s_1, s_2 ar &= s_2(s_2 +1)hbar^2|s, m_s; s_1, s_2 ar = 3/4 hbar^2|s, m_s; s_1, s_2 ar\
-    S_z|s, m_s; s_1, s_2 ar &= m_s hbar |s, m_s; s_1, s_2 ar
+]
+
+= Perturbation theory for a 3-level problem
+
+#answer[
+  The Hamiltonian of the 3-level system is given as
+  #nonum($hat(H) = mat(-u,v,0;v,u,0;0,0,u') quad ;u',u,v >0$)
+  To apply perturbation theory to this we seperate $hat(H)$ into $H_0 +V$ where $H_0$ is the zeroth Hamiltonian and $V$ is the perturbation.
+
+  We define $H_0$ and $V$ to be 
+  $ H_0 =  mat(-u,0,0;0,u,0;0,0,u') quad quad V=mat(0,v,0;v,0,0;0,0,0) $
+]
+#answer[
+  We want to find the energy eigenvalues $E_1^((0)),E_2^((0)),E_3^((0))$ and the energy 
+  eigenstates $ket(psi_1^((0))),ket(psi_2^((0))),ket(psi_3^((0)))$ of the zeroth 
+  Hamiltonian. The eigenvalues of a diagonal matrix like $H_0$ are the diagonal entries 
+  themselves. So the energy eigenvalues are
+  $ E_1^((0)) &= -u  quad &  quad E_2^((0)) &= u quad & quad E_3^((0)) &= u' \
+    ket(psi_1^((0))) &= vec(1,0,0) quad & quad  ket(psi_2^((0))) &= vec(0,1,0)quad & quad ket(psi_3^((0))) 
+    & = vec(0,0,1)
   $
-  We can then write our reformed hamiltonian as 
-  $ hat(H) = J/2(vb(S)_(t o t)^2 - 3/2 hbar^2 II) $<refham>
-  We can see that the energy eigenvalue is independent of $m_s$, thus the levels with same $m_s$ are degenerate.
-  We have already seen before that this is the addition of two spin 1/2 momenta we thus get the 
-  eigenstates
+]
+#answer[
+  We calculate the energy corrections upto the second order. The first order and second energy corrections are given by
+  $ E_n^((1)) = bra(psi_n^((0)))V ket(psi_n^((0)))\ 
+    E_n^((2)) = bra(psi_n^((0)))V ket(psi_n^((1))) = sum_(k eq.not n) abs(bra(psi_k^((0)))V ket(psi_n^((0))))^2/(E_n^((0)) - E_k^((0)))
+    $
+    To find them we represent the perturbation $V$ in the eigenbasis of $H_0$ 
+    that is in terms of $ket(psi_1^((0))),ket(psi_2^((0))),ket(psi_3^((0)))$.
+  $ V &=  
+  mat(bra(psi_1^((0)))V ket(psi_1^((0))),bra(psi_1^((0)))V ket(psi_2^((0))),
+  bra(psi_1^((0)))V ket(psi_3^((0))) ;
   
-  #set math.cases(reverse: true)
-  #underline("Singlet State")
-  $ |0,0 ar = 1/sqrt(2)(ket(arrow.t arrow.b) - ket(arrow.b arrow.t )  quad[E_(S=0) = -3/4 J hbar^2] $
-  #underline("Triplet State")
-  $ cases(|1","1 ar = ket(arrow.t arrow.t), ket(1","0) = 1/sqrt(2) [ket(arrow.t arrow.b ) + ket(arrow.b arrow.t)], ket(1","-1) = ket(arrow.b arrow.b) )= [E_(S=1) = 1/4 J hbar^2]  $
-]
-#answer[
-  The operator $vb(S)_(t o t)(hat(n)) = n_x S_x + n_y S_y + n_z S_z$. Let us now calculate the expectation value of
-  $vb(S)_(t o t)(hat(n))$ in the ground singlet state.
-  $ expval(vb(S)_(t o t)(hat(n))) &= n_x bra(0","0)S_x ket(0","0) + n_y bra(0","0) S_y ket(0","0) + n_z bra(0","0)S_z ket(0","0) \ 
-  &= n_x/2 bra(0","0)S_+ + S_- ket(0","0) + n_y/(2i) bra(0","0) S_+ - S_- ket(0","0)\ 
-  &=0 $
-  We can see that the expectation value is independent of the value of the $hat(n)$ and thus is exhibits 
-  SU(2) symmetry.
-]
-#answer[
-  We now calculate the magnetisations of the three excited states 
-  $ expval(vb(S)_(t o t)(hat(n))) &= n_x bra(1","m)S_x ket(1","m) + n_y bra(1","m) S_y ket(1","m) + n_z bra(1","m)S_z ket(1","m) \ 
-   &= n_z bra(1","m) S_z ket(1","m)  $
-  The total magnetisation for the triplet excited states are
-  #set math.cases(reverse: false)
-  $ expval(vb(S)_(t o t))= cases(n_z quad quad &m=1,0 quad  quad& m=0, -n_z quad quad & m=-1 ) $
-  Classically ferromagnets are magnets with all dipoles aligned in the same direction. Thus the expectation value in the $hat(z)$ direction is non zero. 
-  Thus we have $ket(1","1)$ and $ket(1","-1)$ to be classical ferromagnets.
+  bra(psi_2^((0)))V ket(psi_1^((0))),bra(psi_2^((0)))V ket(psi_2^((0))),bra(psi_2^((0)))V ket(psi_3^((0))) ;
 
-  To adequately describe the singlet state we would require another operator called the staggered magnetism operator which gives us anti-ferromagnets. This results in the
-  singlet states being antiferromagnetic.
-]
-
-= Broken symmetry and a quantum "phase" transition in a toy model
-
-#answer[
-  We have already calculated for the above Hamiltonian. The new Hamiltonian has a small modification over the
-  previous one. Using @refham, The new Hamiltonian simplifies to
-  $ hat(H) &= J(vb(S)_1 dot vb(S)_2) + B(S_1^z + S_2^z) \ 
-  & = J/2(vb(S)_(t o t)^2 - 3/2 hbar^2 II) + B S_z
+  bra(psi_3^((0)))V ket(psi_1^((0))),bra(psi_3^((0)))V ket(psi_2^((0))),
+  bra(psi_3^((0)))V ket(psi_3^((0))) ;)\ 
+  
+  & = mat(0,v,0;v,0,0;0,0,0)
   $
-  The eigenstates are the same with different eigenvalues for energy. We can see that the introduction of the magnetic field
-  dependence lifts the degeneracy we saw in the previous step. The Energy eigenvalues are given below\
-
-  #underline("Singlet State") #h(3.0em)$ket(0","0) --> E_(0,0) = -3/4 J hbar^2$
-
-  #underline("Triplet States")
-  $ s=1 : cases(ket(1","1) &-->E_(1,1)=1/4 J hbar^2+B hbar,ket(1","1) &--> E_(1,1)=1/4 J hbar^2 ,ket(1","-1) &--> E_(1,-1)=1/4 J hbar^2 - B hbar) $
-  #figure(image("evsb.png",width : 120%), caption : [Variation of Energy eigenvalues with $B/hbar$ for both $J>0$ and $J<0$ ]) 
-]
-#answer[
-  We have $J>0, B>0$. From the plot it be can be easily seen that the state $ket(1","-1)$ crosses the state
-  $ket(0","0)$
-  $ 1/4 J hbar^2 -B hbar = -3/4 J hbar^2 => B = J hbar $
-  Before the crossing the ground state was $ket(0","0)$, which after crossing become $ket(1","-1)$. This causes 
-  symmetry breaking. As we saw in Q1 $ket(0","0)$ has SU(2) symmetry, but $ket(1","-1)$ does not have 
-  SU(2) symmetry. Thus the ground state no longer has SU(2) symmetry.
-]
-  #answer[
-    If we take $J<0$, as shown in the graph, there is no "phase" transition taking place. $ket(1","-1)$ is
-    always the ground state. In this case however, the ground state doesnt exhibit SU(2) symmetry.
-
-    #h(1.0em) This can also be expected as 
-    again if we consider the staggered magnetism operator, $ket(0","0)$ is an antiferromagnetic state. That means that the state has equal spins in opposite directions.
-    However the state $ket(1","-1)$ is ferromagnetic and has a preferred direction. This causes symmetry breaking.
-]
-=  Gentle introduction to entanglement: the singlet state
-
-#answer[
- #set math.vec(delim: "[")
- #set math.mat(delim: "[")
-  The singlet state is given as $ket(chi) = 1/2(ket(arrow.t arrow.b) - ket(arrow.b arrow.t))$. We will be using the Pauli-Matrix
-  representations. From $HH(2)$,a 2-dimensional hilbert space, the eigenstates of the $S_z$ are represented as
-
+  Let us calculate $E_n^((1))$ using the gram-matrix elements of $V$ using the eigenbasis of $H_0$
+  $ E_1^((1)) = E_2^((2)) = E_3^((3))=0 $
+  We know calculate $E_n^((2))$ using the matrix elements of $V$ in the eigenbasis of $H_0$
   $ 
-    ket(arrow.t) = vec(1,0) quad quad ket(arrow.b) = vec(0,1)
+    E_1^((2)) &= abs(bra(psi_2^((0)))V ket(psi_1^((0))))^2/(E_1^((0)) - E_2^((0))) 
+    = -v^2/(2u) \
+
+    E_2^((2)) &= abs(bra(psi_1^((0)))V ket(psi_2^((0))))^2/(E_2^((0)) - E_1^((0))) = v^2/(2u) \
+    E_3^((2)) &= 0
+
+   $
+]
+#answer[
+  We use the expression for the corrections to the eigenstates as  $ket(psi_n^((j)))=sum_(k eq.not n) c_(n k)^((j)) ket(psi_n^((0)))$ to find the first order corrections to the eigenstates. To find out $c_(n k)^((1))$ we use,
+
+  $ c_(n k)^((1)) =  (bra(psi_k^((0)))V ket(psi_n^((0))))/(E_n^((0)) -E_k^((0))) $
+  Let us write the matrix of the coefficients of first order corrections $C$ as
+  $C_(i j) = c_(i j)^((1))$. The matrix is
+  $ C = mat(0,v/(2u),0;-v/(2 u),0,0;0,0,0) $ 
+  The first order correction to the eigenstates are $ket(psi_1^((1))),ket(psi_2^((1))),ket(psi_3^((1))),$ are 
+  $ ket(psi_1^((1))) &= C_12 ket(psi_2^(0)) +  C_13 ket(psi_3^(0)) = -v/(2 u) ket(psi_2^((0))) = -v/(2 u) vec(0,1,0) \
+  ket(psi_2^((1))) &= C_21 ket(psi_1^(0)) +  C_23 ket(psi_3^(0)) = v/(2 u) ket(psi_1^((0))) = v/(2u) vec(1,0,0)\
+ket(psi_3^((1))) &= C_32 ket(psi_2^(0)) +  C_31 ket(psi_1^(0)) = 0 $
+
+]
+#answer[
+  We now solve the problem by diagonalising the matrix $H$. The matrix $H$ is diagonalizable because it is a symmetric matrix and symmetric matrics are normal. By Spectral Theorem, there exists an orthogonal eigenbasis of the matrix. After diagonalizing, we get 
+  $ H &= mat(-u,v,0; v,u, 0; 0,0,u')  = mat(quad, quad, quad;psi_(1),  psi_(2), 
+  psi_(3); quad,quad,quad) 
+   mat(-sqrt(u^2+v^2),0,0;0,sqrt(u^2+v^2),0;0,0,u')  mat(quad, quad, quad;psi_(1),  psi_(2),  psi_(3); quad,quad,quad)^T \
+   &= mat((-sqrt(u^2+ v^2)+u)/v, (-sqrt(u^2+ v^2)-u)/v, 0; 1,1,0;0,0,1)
+   mat(-sqrt(u^2+v^2),0,0;0,sqrt(u^2+v^2),0;0,0,u')  
+   mat((-sqrt(u^2+ v^2)+u)/v ,1 ,0,; (-sqrt(u^2+ v^2)-u)/v, 1, 0; 0,0,1)
+   $
+
+   The energy eigenvalues that we get from diagonalising the matrix are 
+    #rect[$ E_1 = -sqrt(u^2+v^2) quad;quad 
+      E_2 = sqrt(u^2+v^2) quad;quad      E_3 = u' $]
+   The third energy eigenvalue is not disturbed by the perturbation $V$. Let us focus on the other ones. In the regime where $v << u$, we expand eigenvalues as a power series in terms of $v/u$
+   #nonum($E_1 = -u sqrt(1+(v^2)/(u^2)) = -u - v^2/(2 u) - O(v^4/u^2)\ E_1 = u sqrt(1+(v^2)/(u^2)) = u + v^2/(2 u) + O(v^4/u^2)\ $)
+   Thus we can see that this result matches that of perturbative result which 
+   we have calculated ignoring terms with $O(v^4/u^2)$.
+  //  The eigenvectors are 
+  //  $ psi_1 = vec((-sqrt(u^2+ v^2)+u)/v, 1, 0), psi_2 = vec((-sqrt(u^2+ v^2)-u)/v, 1, 0), psi_3 = vec(0,0,1) $
+  //  Let us take the first two eigenvectors and again in the regime of $v<<u$ let us expand into a power series
+  //  $ psi_1 &= vec(u/v (1-sqrt(1+v^2/u^2)),1,0) = vec(u/v (-v^2/(2 u^2) - O(v^4/u^4)),1,0) =
+  //  vec(-v/(2 u) - O(v^3/u^3),1,0) \
+  //  &= vec(-v/(2 u),1,0)
+  //  $   
+]
+#answer[
+  #set math.mat(delim:"(")
+  We calculate the wavefunction renormalization as $Z$ of the ground state which is given by 
+  $ Z = abs(braket(psi_1^((0)),psi_1)_N)^2 $
+  We apply the corrections we obtained from the perturation theory results, to the ground state 
+  $ & ket(psi_1) = ket(psi_1^((0))) -v/(2 u) ket(psi_2^((0))) = vec(1,-v/(2u),0)\
+  => & ket(psi_1)_N = 1/sqrt(1+v^2/(2u^2)) vec(1,-v/(2u),0)\
+  => & Z = 1/(1+v^2/(2 u^2))abs(mat(1,0,0)vec(1,-v/(2u),0))^2 \
+  => & Z = 1/(1 + v^2/(2 u^2))
   $
-  For the two interacting spins, there are two independent 2-dimensional Hilbert spaces, so we know that $ket(arrow.t arrow.t) = ket(arrow.t) tc ket(arrow.t),ket(arrow.b arrow.b) = ket(arrow.b) tc ket(arrow.b)ket(arrow.t arrow.b) = ket(arrow.t) tc ket(arrow.b)$ and $ ket(arrow.b arrow.t) = 
-  ket(arrow.b) tc ket(arrow.t)$. So we represent all the direct product states
-  $ ket(arrow.t arrow.t) = vec(1,0) tc vec(1,0) = vec(1,0,0,0) #h(5em) ket(arrow.b arrow.b)= 
-  vec(0,1) tc vec(0,1) = vec(0,0,0,1) \
-
- ket(arrow.t arrow.b) = vec(1,0) tc vec(0,1) = vec(0,1,0,0) #h(5em) ket(arrow.b arrow.t)= 
-  vec(0,1) tc vec(1,0) = vec(0,0,1,0) $
-  In the matrix representation , the singlet state is given as
-  $ ket(chi) = 1/sqrt(2) {vec(0,1,0,0)- vec(0,0,1,0)} = 1/sqrt(2) vec(0,1,-1,0) $
-
-  The density matrix representation of the singlet state is given as
-  $ rho = ketbra(chi,chi) = 1/2 vec(0,1,-1,0)(0,1,-1,0) = 1/2 mat(0,0,0,0;0,1,-1,0;0,-1,1,0;0,0,0,0) $
+  The regime of validity of this perturbation problem is $v<<u$. We can see this regime validity appearing in the renormalization problem. Going beyond the regime of this problem, we get 
+  #nonum($ Z --> 0 , quad a s  quad v/u -->  oo $)
 ]
-#answer[
- #set math.mat(delim: "[")
-  The density matrix $rho in L(HH_1(2) tc HH_2(2))$ where $L(HH_1(2) tc HH_2(2))$ is the dual of the direct product 
-  space. The reduced density matrix elements defined as $rho_1 in L(HH_1(2))$ is given as 
-  $ bra(a) rho_1 ket(b) = sum_n [bra(a) tc bra(n) ]rho [ket(n) tc ket(b)] $
-  where $ket(a),ket(b)$ are the orthonormal eigenkets of $HH_1(2)$ and $ket(n)$ are the eigenstates
-  of $HH_2(2)$. Thus the matrix elements of $rho_1$ are given as
-  $ bra(arrow.t)rho_1 ket(arrow.t) = bra(arrow.t arrow.t)rho ket(arrow.t arrow.t) + bra(arrow.t arrow.b)rho ket(arrow.t arrow.b) = 1/2 
-   quad quad quad bra(arrow.t)rho_1 ket(arrow.b) = bra(arrow.t arrow.t)rho ket(arrow.b arrow.t) + bra(arrow.t arrow.b)rho ket(arrow.b arrow.b) = 0 \ 
-    bra(arrow.b)rho_1 ket(arrow.t) = bra(arrow.b arrow.t)rho ket(arrow.t arrow.t) + bra(arrow.b arrow.b)rho ket(arrow.t arrow.b) = 0 
-   quad quad quad bra(arrow.b)rho_1 ket(arrow.b) = bra(arrow.b arrow.t)rho ket(arrow.b arrow.t) + bra(arrow.b arrow.b)rho ket(arrow.b arrow.b) = 1/2
-$
-  The reduced density matrix is 
-  $ rho_1 = 1/2 mat(1,0;0,1) =  1/2 II $
-]
-#answer[
-  The eigenvalues of the reduced density matrix $rho_1$ are $lambda_1 = lambda_2 = 1/2$. Thus the Entanglement
-  Entropy(EE) of the first state 
-  $ S_1 = -Tr[rho_1 ln rho_1] = - sum_i lambda_i ln lambda_i = -2(1/2 ln 1/2) = ln 2 $
-  We have that the maximum EE of a two component system is $ln 2$. This tells us that the singlet spin state
-  is maximally entangled.
-]
-#answer[
- #set math.mat(delim: "[")
-  We want to find the EE of the state $ket(chi(theta)) = cos(theta)ket(arrow.t arrow.b) + sin(theta)ket(arrow.b arrow.t)$ with the first
-  spin state. For this we need to the find the reduced density matrix over the second spin.
-  The density matrix is 
-  $ rho = mat(0,0,0,0;0,cos^2 theta, cos theta sin theta,0; 0,cos theta sin theta, sin^2 theta, 0;0,0,0,0)
-  $
-
-The reduced density matrix is given by $rho_1$
-  $ rho_1 = mat(cos^2 theta, 0; 0, sin^2 theta) $
-  We want to find the EE of this state. The eigenvalues of $rho_1$ are $lambda_1 = cos^2 theta, lambda_2 = sin^2 theta$. The 
-  entanglement Entropy (EE) is given as 
-  $ S_1(theta)= -sum_i lambda_i ln lambda_i = -cos^2 ln (cos^2 theta) - sin^2 ln(sin^2 theta) $
-  The graph of $S_1(theta)$ vs $theta$ to find states of maximal EE is given as 
-  #figure(image("s1.png", width: 120%), caption :[Entanglement Entropy vs $theta$])
-
-  The minimal EE is given as $theta = 0, pi/2 ,pi, (3pi)/2$ with $S_1 = 0$ where the corresponding states 
-  are not entangled.\
-  The maximal EE is given as $theta = pi/4, (3 pi)/4,(5 pi)/4 , (7 pi)/4$ with $S_1=ln 2$, where the corresponding
-  states are maximally entangled.
-
-  The states with minimal and maximal entanglement are
-#let vimg1 = {
-  figure(table(
-  columns: (auto,auto),
-
-  table.header[$theta$][States $S_1(theta) = 0quad$],
-  [$0$], [$ket(arrow.t arrow.b)$],
-  [$pi/2$], [$ket(arrow.b arrow.t)$],
-  [$pi$], [$-ket(arrow.t arrow.b)$],
-  [$(3 pi)/2$], [$-ket(arrow.t arrow.t)$],
-), caption: "Minimal entanglement states")
-
-    
-}
-#let vimg2 = {
-  figure(table(
-  columns: (auto,auto),
-
-  table.header[$theta$][States $S_1(theta) = ln 2 quad$],
-  [$pi/4$], [$ket(1","0)$],
-  [$(3 pi)/4$], [$-ket(0","0)$],
-  [$(5 pi)/4$], [$-ket(1","0)$],
-  [$(7 pi)/4$], [$ket(0","0)$],
-), caption: "Maximal entanglement states")
-    
-}
-
-#figure(
-    grid(
-        columns: 2,     // 2 means 2 auto-sized columns
-        gutter: 2mm,    // space between columns
-        vimg1,
-        vimg2,
-    ),
-)
-]
-
-
-
-
-

@@ -18,7 +18,7 @@
   show math.equation: set text(weight: 400)
   show math.equation: set block(spacing: 0.65em)
   set math.equation(numbering: "(1)")
-  set heading(numbering: "1.1")
+  set heading(numbering: "Q1.a.")
 
   // Set run-in subheadings, starting at level 4.
   show heading: it => {
@@ -186,14 +186,59 @@ bodyfmt: body => [
 #let answer = thmenv(
 "answer", // identifier
 "heading", // base - do not attach, count globally
-none, // base_level - use the base as-is
-(name, number, body, color: black) => [
-// fmt - format content using the environment
-// name, number, body, and an optional color
-#h(1.2em) #rect[*Answer #number #name*]
-#h(0.2em)
-#body
-#v(0.5em)
+1, // base_level - use the base as-is
+(name, number , body, color: black) => [
+  #h(1.2em)  #rect[*Answer #number *]
+ #h(0.2em)
+ #body
+ #v(0.5em)
+
+// #if c>initc {
+  
+// }
+// #h(1.2em) #rect[*Answer #counter(heading).display()#number #initc #type(c) *]
+// #h(0.2em)
+// #body
+// #v(0.5em)
 ]
 )
+// #let initc = 0
+// #let answer = thmenv(
+// "answer", // identifier
+// "heading", // base - do not attach, count globally
+// 1, // base_level - use the base as-is
+// (name, number , numbering:"a.", body, color: black) => [
+// // fmt - format content using the environment
+// // name, number, body, and an optional color
+// // #let c = context counter.at(here())
+// #let c = number
+// #c
+// #locate(loc => {
+//   let c = counter(heading).at(loc).at(0)
+  
+//   let count = 61
+//   if c>initc {
+//     let count = 61
+//     let initc = c
+
+//   }
+//   else if c ==initc {
+//     let count = count+1
+//     text("lol")
+//   }
+//   h(1.2em) 
+//   rect[*Answer #counter(heading).display()#number #initc #count *]
+//   h(0.2em)
+//   body
+//   v(0.5em)
+// })
+// // #if c>initc {
+  
+// // }
+// // #h(1.2em) #rect[*Answer #counter(heading).display()#number #initc #type(c) *]
+// // #h(0.2em)
+// // #body
+// // #v(0.5em)
+// ]
+// )
 #let nonum(eq) = math.equation(block: true, numbering: none, eq)
