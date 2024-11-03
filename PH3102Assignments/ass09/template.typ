@@ -10,14 +10,14 @@
   // Set the document's basic properties.
   set document(author: authors.map(a => a.name), title: title)
   set page(
-    margin: (left: 25mm, right: 25mm, top: 25mm, bottom: 30mm),
+    margin: (left: 20mm, right: 20mm, top: 20mm, bottom: 20mm),
     numbering: "1",
     number-align: center,
   )
   set text(font: "New Computer Modern", lang: "en")
   show math.equation: set text(weight: 400)
-  show math.equation: set block(spacing: 0.65em)
-  set math.equation(numbering: "(1)")
+  show math.equation: set block(spacing: 0.60em)
+  set math.equation(numbering: "[1]")
   set heading(numbering: "Q1.a.")
 
   // Set run-in subheadings, starting at level 4.
@@ -83,8 +83,8 @@
             [*#author.name*],
           )
         }
-        #author.email \
-        #author.affiliation
+        // #author.email \
+        // #author.affiliation
       ]),
     ),
   )
@@ -184,23 +184,14 @@ bodyfmt: body => [
   ]
 )
 #let answer = thmenv(
-"answer", // identifier
-"heading", // base - do not attach, count globally
-1, // base_level - use the base as-is
-(name, number , body, color: black) => [
-  #h(1.2em)  #rect[*Answer #number *]
- #h(0.2em)
- #body
- #v(0.5em)
-
-// #if c>initc {
-  
-// }
-// #h(1.2em) #rect[*Answer #counter(heading).display()#number #initc #type(c) *]
-// #h(0.2em)
-// #body
-// #v(0.5em)
-]
+  "answer", // identifier
+  "heading", // base - do not attach, count globally
+  1, // base_level - use the base as-is
+  (name, number , body, color: black) => [
+    #h(1.2em)  #rect[*Answer #number *]
+    #h(0.2em)
+    #body
+  ]
 )
 // #let initc = 0
 // #let answer = thmenv(
