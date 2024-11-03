@@ -31,7 +31,7 @@
   The energy eigenvalues and eigenfunctions to $H_0$ are given as
   #nonum($ E_n = (n^2 pi^2 hbar^2)/(2 m a^2 )quad ,quad  psi_n^((0)) = sqrt(2/a) sin((n pi x)/a)  $)
 #answer[
-  Considering the nature of the perturbation, the ground state energy should increase to accomdate the perturbation. Since $V_0>0$, the particle in its ground state should have higher energy. The peak of the ground state takes place at $x=a\/2$. Since there is a higher potential at $x=a\/2$, the peak which is proportional to the pdf at $x=a\/2$, will decrease since the addition of a higher potential near it would decrease the pdf and thereafter the peak.
+  Considering the nature of the perturbation, the ground state energy should increase to accomodate the perturbation. Since $V_0>0$, the particle in its ground state should have higher energy. The peak of the ground state takes place at $x=a\/2$. Since there is a higher potential at $x=a\/2$, the peak which is proportional to the pdf at $x=a\/2$, will decrease since the addition of a higher potential near it would decrease the pdf and thereafter the peak.
 ]
 #answer[
   We now calculate the first order correction to the ground state energy. The first order correction is given as
@@ -39,7 +39,7 @@
    sin^2((pi x)/a) d x = [(2 pi + 3^(3/2))/(6 pi)] V_0 = [1/3 + sqrt(3)/(2 pi) ]V_0   $
 ]
 #answer[
-  The perturbation $V_0$ is invariant under parity transformation about $x=a\/2$. Thus there will only be mixing with among the states of same parity. The ground state is even parity about $x=a\/2$. Thus will mix with only the states that have even parity around $a\/2$ which have  $n = 3,5,7 ...$ which are odd eigenstates. The lowest excited state with which it will mix is $psi_3$ 
+  The perturbation $V_0$ is invariant under parity transformation about $x=a\/2$. Thus there will only be mixing with among the states of same parity. The ground state has even parity about $x=a\/2$. Thus it will mix with only the states that have even parity around $a\/2$ which have  $n = 3,5,7 ...$ which are odd eigenstates. The lowest excited state with which it will mix is $psi_3$ 
 
   $ E_1^((2)) bar_(n=3) & = abs((bra(psi_3^((0))) V_0 ket(psi_1^((0)))))^2/(E_1^((0)) - E_3^((0)))\ 
               & =  -( m a^2) /(4 a hbar^2 pi^2) abs(2/a V_o integral_(a/3)^((2a)/3) sin((pi x)/a)sin((3 pi x)/a) d x )^2\
@@ -62,13 +62,13 @@
   (3 sqrt(6) V_0m a^(3/2))/(16 pi^3 hbar^2) sin((3 pi x)/a) $
 ]
 #answer[
-  To infer results for $V_0<0$ in the perturbation we map $V_0 --> - V_0$. The energy eigenvalues and eigenstates are given as
+  To infer results for $V_0<0$ in the perturbation, we map $V_0 --> - V_0$. The energy eigenvalues and eigenstates are given as
   
   $ E_1 &=  (pi^2 hbar^2)/(2 m a^2)-V_0(1/3 + sqrt(3)/(2 pi)) - (27 m a^2 V_0^2)/(64 pi^4 hbar^2)\
   ket(psi_1) &=  sqrt(2/a) sin((pi x)/a) - (3 sqrt(6) V_0m a^(3/2))/(16 pi^3 hbar^2) sin((3 pi x)/a) $
 ]
 #answer[
-  The plots for the unperturbed ground state and pertrubed ground states with $V_0>0$ and $V_0<0$ are plotted below,
+  The plots for the unperturbed ground state and perturbed ground states with $V_0>0$ and $V_0<0$ are plotted below,
   #figure(image("wavefunc.png", width:100%), caption:[Sketches of the ground state wavefunctions])  
 ]
 
