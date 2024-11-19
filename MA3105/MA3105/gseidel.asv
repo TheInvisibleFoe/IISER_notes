@@ -1,0 +1,22 @@
+function x=gseidel(A,b,tol)
+  %A = [9 1 1; 2 10 3; 3 4 11];
+  D = diag(diag(A));
+  P = A-D
+  X = [1 -2 1]';
+  x=[0 0 0]';
+  n = length(b);
+  invD=D;
+  for i=n:-1:1
+    invD(i,i) = 1/D(i,i) 
+  end
+  i =1
+  while true
+      x = invD*(b - P*x)
+      err = max(abs(X-x));
+      fprintf("%d \t %f \t %f \t %f \t %f",i,x(1),x(2),x(3),err)
+      if err<tol
+        break
+      end
+      i = i+1;
+  end
+end
