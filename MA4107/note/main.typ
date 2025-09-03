@@ -12,7 +12,7 @@
 #show: thmrules
 // Useing the configuration
 #show: tuw-thesis.with(
-  header-title: "2D Ising Model",
+  header-title: "Statistical Inference",
   lang: "en",
 )
 
