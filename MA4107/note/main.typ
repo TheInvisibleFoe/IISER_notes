@@ -93,6 +93,7 @@
   show regex("[\d.]+"): set text(fill: blue)
   it
 }
+#outline()
 #pagebreak()
 
 #set text(font: "Concrete Math")

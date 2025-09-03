@@ -131,14 +131,30 @@ INSERT PROOF.
   + $T$ is sufficient for $theta$
   + For any other sufficient statistic $S$, $exists$ a function $g$ such that $T = g(S)$.
 
-  1. Sufficiency of $T$:
+  1: Sufficiency of $T$:
+
   Let $frak(T) = {T(y): y in RR^n}$ be the image of $T$. Let ${A_t: t in frak(T)}$ be the level sets of $T$. We can pick an appropriate $y^*$  such that,
   $
     f_theta (x) = f_theta (y^*) (f_theta (x))/(f_theta (y^*))= g(T(x), theta) h(x)
   $
   We choose $y^*$ such that $T(y^*) = T(x)$, i.e. we choose $y^*$ from the level set $A_(T(x))$. Then by Fisher Neyman factorization theorem @fnft, $T$ is sufficient for $theta$.
-]
 
+  2: Minimality of $T$:
+ Let $S$ be any other sufficient statistic for $theta$. Then by @fnft,
+  $
+    f_theta (x) = g_1 (S(x), theta) h_1 (x)
+  $
+  Note that,
+  $
+    (f_theta (x))/(f_theta (y)) = (g_1 (S(x), theta) h_1 (x))/(g_1 (S(y), theta) h_1 (y))
+  $
+  We need to show that there exists a function $g$ such that $T(x) = g(S(x))$. We just need to show the single valuedness of $g$. To show that we just need to show if $S(x) = S(y)$ then $T(x) = T(y)$. Suppose $S(x) = S(y)$, then,
+  $
+    (f_theta (x))/(f_theta (y)) = (h_1 (x))/(h_1 (y)) "which is free of " theta
+  $
+  We can use the property in @minchar to conclude that $T(x) = T(y)$. Thus $g$ is single valued and $T$ is minimal sufficient for $theta$.
+
+]
 Note a sufficient statistic can also contain garbage information. A sufficient statistic can be paired with an ancillary statistic and the combined statistic would still be sufficient.
 
 #definition("Complete Statistic")[
@@ -155,12 +171,65 @@ Unfortunately we have no easy characterization of complete statistic, like @minc
 
   A complete sufficient statistic is independent of any ancillary statistic.
 ]
+#proof[
+  (Only the discrete case is shown here. The continuous case is similar.)
+  Let $T$ be a complete sufficient statistic and $S$ be an ancillary statistic. It is enough to show that,
+  $
+    P (S = s | T = t) = P (S = s) " " forall " " s,t
+  $
+  Note that here none of the probabilities depend on $theta$ as $S$ is ancillary and $T$ is sufficient. Let us fix some $s$. Define the function,
+  $
+    h(t) = P(S=s|T=t) - P(S=s)
+  $
+  Note that $h(T)$ is a statistic as it does not depend on $theta$.
+  $
+    EE_theta [h(T)] &= sum_t h(t) P_theta(T=t) \
+    &= sum_t [P(S=s|T=t) -P(S=s)]P_theta(T=t)\
+    &= sum_t P(S=s,T=t) - P(S=s) sum_t P_theta(T=t)\
+    &= P(S=s) - P(S=s) = 0
+  $
+  Since $T$ is complete, $P(h(T) = 0) = 1$. Thus $h(T) = 0$. This proves the independence of $S$ and $T$.
 
+]
 #theorem("Lehmann Scheffe")[
 
   Let $dt$ have a joint pdf/pmf. If $T$ is a complete sufficient statistic for $theta$, then $T$ is minimal sufficient.
 ]<lehsch>
+#proof[
+  This proof will be sketched and not completely written out.
 
+  We will construct a minimal statistic $S$ and then show that $T$ and $S$ are related by one to one functions. This will prove that $T$ is also minimal sufficient.
+
+  Define an equivalence relation on $RR^n$ as follows,
+  $
+    x scripts(~)_S y "if and only if" (f_theta (x))/(f_theta (y)) "is free of" theta " " forall " " theta in Theta
+  $
+
+  Construct partitions of $RR^n$ using the equivalence relation. Define a statistic $S$ such that $S(x) = S(y)$ if and only if $x scripts(~)_S y$.
+
+  #result("Lehman Scheffe sufficiency")[
+    The statistic $S$ is minimal sufficient for $theta$.
+  ]
+  A proof of this is not provided here.
+
+  Since $T$ is sufficient for $theta$, we have $S = g_1(T)$, since $S$ is minimal sufficient. Define,
+  $
+    g_2(S) = EE [T|S]
+  $
+  This is indeed a valid statistic. Then define,
+  $
+    g(T) = T -g_2(S)
+  $
+  Thus we can write,
+  $
+    EE_theta [g(T)] = EE_theta [T] - EE_theta [g_2(S)] = EE_theta [T] - EE_theta [EE_theta [T|S]] = 0
+  $
+  Since $T$ is complete, $P_theta (g(T) = 0) = 1 " " forall " " theta in Theta$. Thus,
+  $
+    P_theta (T = g_2(S)) = P_theta (T = g_2(g_1(T))) = 1 " " forall " " theta in Theta
+  $
+  $g_2$ and $g_1$ can be shown to be inverses of each other. Thus $T$ is minimal sufficient for $theta$.
+]
 The reverse implication does not hold and an example shall be provided below.
 
 = Families of distribution
@@ -298,7 +367,7 @@ $
 If such a $T^*$ exists, it is called the Uniform Minimum Variance Unbiased Estimator (UMVUE).
 
 Some comments on unbiased estimators,
-+ An unbiased estimator need not exist. 
++ An unbiased estimator need not exist.
 + For a given class of estimators, the MSE error need not be the lowest for an unbiased estimator.
 
 Unbiased estimators might not very good for certain purposes. In general this approach is taken so that the MSE can be minimized over all values of $theta$ in $Theta$, provided we restrict ourselves to unbiased estimators.
@@ -308,7 +377,7 @@ Unbiased estimators might not very good for certain purposes. In general this ap
   Let $dt$ have a joint pdf/pmf $f_theta (dot)$ with $theta in Theta subset RR^p$. Let $T=T(dt)$ be a sufficient statistic for $theta$. Let $S = S (dt)$ be a statistic such that
   + $EE_theta [S] = theta " " forall " " theta in Theta$
   + $vr_theta (S) < oo " " forall " " theta in Theta$
-  
+
   Define the new statistic,
   $
     S^* = EE_theta [S | T]
@@ -323,8 +392,8 @@ Unbiased estimators might not very good for certain purposes. In general this ap
 #proof[
   Note that $S^*$ is a statistic as it is a conditional expectation on the sufficient statistic $T$. To show unbiasedness,
   $    EE_theta [S^*] = EE_theta [EE_theta [S | T]] = EE_theta [S] = theta $
-  using the law of total expectation. 
-  
+  using the law of total expectation.
+
   To show the variance reduction, we use a formula for the conditional variance.
 
   Let $X,Y$ be random variables, with $EE[Y^2] < oo$. Then,
@@ -381,11 +450,11 @@ Thus if a minimal sufficient statistic $T$ exists, the Rao-Blackwellization with
     EE_theta [S_1^* - S_2^*] = 0 " " forall " " theta in Theta
   $
   We have acheived first order ancillarity. $S_1^*$ and $S_2^*$ are functions of the complete sufficient statistic $T$. Thus using the definition of completeness,
-  $    
+  $
     P_theta (S_1^* - S_2^* = 0) = 1 " " forall " " theta in Theta
   $
 ]
-This theorem shows that the choice of unbiased estimator does not matter if we have a complete sufficient statistic. The Rao-Blackwellization will always be the same. 
+This theorem shows that the choice of unbiased estimator does not matter if we have a complete sufficient statistic. The Rao-Blackwellization will always be the same.
 
 #theorem("Lehmann-Scheffe for UMVUE")[
   Let $T$ be a complete sufficient statistic for $theta$. Let $S$ be any unbiased estimator for $theta$, such that $vr_theta (S) < oo " " forall " " theta in Theta$. Then the Rao-Blackwellization,
@@ -407,9 +476,6 @@ This theorem is the culmination of the previous theorems in this section. If a c
 3. This theorem can be used to check whether unbiased estimators exist or not. If we can find a complete sufficient statistic $T$ and show that no function of $T$ is unbiased for $theta$, then no unbiased estimator for $theta$ exists. This means that the UMVUE exists iff an unbiased estimator exists.
 ]
 
-In general, we have two approaches to find the UMVUE for $theta$. First find a complete sufficient statistic $T$ for $theta$. 
+In general, we have two approaches to find the UMVUE for $theta$. First find a complete sufficient statistic $T$ for $theta$.
 + Find some unbiased estimator $S$ for $theta$ and Rao-Blackwellize it with respect to $T$.
 + Find a function of $T$ which is unbiased for $theta$. We also need check that the function has finite variance.
-
-
-
