@@ -8,6 +8,8 @@
 #import "@preview/codly:1.2.0": *
 #show: codly-init.with()
 #show link: set text(navy)
+
+// Hyperref type links
 #show link: this => {
   let show-type = "box" // "box" or "filled", see below
   let label-color = olive
@@ -33,6 +35,34 @@
   }
 }
 
+// Multi column numerbered list column wise numbered
+#let zip-long(..arrays, fill: none) = {
+  let arrays = arrays.pos()
+  let max-len = calc.max(..arrays.map(x => x.len()))
+  let filler = x => if x.len() == max-len { x } else {
+    x + (fill,) * (max-len - x.len())
+  }
+  array.zip(..arrays.map(filler))
+}
+
+#let solution(body) = body
+
+#let options(body) = context {
+  if type(body) != content or body.func() != [].func() { return }
+  let items = body
+    .children
+    .filter(x => x.func() == enum.item)
+    .enumerate()
+    .map(((i, x)) => [#numbering(enum.numbering, i + 1) #x.body])
+  if items.len() == 0 { return }
+  set raw(lang: "r")
+  grid(
+    columns: 2,
+    column-gutter: 1.65em,
+    row-gutter: par.leading,
+    ..zip-long(..items.chunks(int((items.len() + 1) / 2))).flatten(),
+  )
+}
 #codly(languages: (python: (name: "Python", color: rgb("#006699"))))
 // Define theorem environments
 
@@ -104,9 +134,26 @@
 ).with(numbering: none)
 
 
+// Math align* environment without numbering
 #let nonum(eq) = math.equation(block: true, numbering: none, eq)
+
+
+// custom symbols
 #let ot = sym.times.circle
-#let xx = $bold(x)$
 
-
-#let fl= $frak(L)$
+#let dt = $limits(X)_tilde$
+#let mse = "MSE"
+#let vr = "Var"
+#let un = "Unif"
+#let ex = "Exp"
+#let be = "Ber"
+#let bi = "Binom"
+#let po = "Poi"
+#let no = $cal(N)$
+#let ga = "Gamma"
+#let ca = "Cauchy"
+#let bet = "Beta"
+#let neq = $eq.not$
+#let mse = "MSE"
+#let vr = "Var"
+#let neq = $eq.not$

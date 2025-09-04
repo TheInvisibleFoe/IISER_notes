@@ -101,4 +101,6 @@
 
 #include("sections.typ")
 
+#include "problems.typ"
+
 //#show: appendix
