@@ -107,9 +107,11 @@
 #let exercise = thmbox(
   "exercise",
   "Exercise",
-  stroke: rgb("#ffaaaa") + 1pt,
+  stroke: rgb("#151b54") + 1pt,
+  padding: (top: -1.0em, bottom: -2.0em),
   base: none, // Unattached: count globally
-).with(numbering: "I") // Use Roman numerals
+  radius: 0.0em,
+).with(numbering: "1") // Use Roman numerals
 
 // Examples and remarks are not numbered
 #let example = thmplain("example", "Example").with(numbering: none)
@@ -125,6 +127,14 @@
   "Proof",
   base: "theorem",
 )
+#let hint = thmplain(
+  "hint",
+  [#h(1em) Hint],
+  base: "exercise",
+  padding: (top: -0.5em, bottom: 0.0em),
+  inset: 0em,
+).with(numbering: none)
+
 
 #let solution = thmplain(
   "solution",
@@ -133,6 +143,8 @@
   inset: 0em,
 ).with(numbering: none)
 
+// Set default font to Concrete Math Bold
+#set text(font: "Concrete Math Bold")
 
 // Math align* environment without numbering
 #let nonum(eq) = math.equation(block: true, numbering: none, eq)
