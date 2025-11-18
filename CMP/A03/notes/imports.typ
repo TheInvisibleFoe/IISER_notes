@@ -109,6 +109,13 @@
 #let nonum(eq) = math.equation(block: true, numbering: none, eq)
 #let ot = sym.times.circle
 #let xx = $bold(x)$
-
-
+#let pm = sym.plus.minus
+#let mp = sym.minus.plus
+#let dd = sym.delta
+#let dtm = math.mat(delim: "|")
+#let leq = $<=$
+#let geq = $>=$
+#let eps = $epsilon.alt$
+#let int = $integral$
+#let cdot = $dot.c$
 #let fl= $frak(L)$
