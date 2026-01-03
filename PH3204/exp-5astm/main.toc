@@ -1,0 +1,9 @@
+\contentsline {section}{\numberline {1}Aim}{1}{section.1}%
+\contentsline {section}{\numberline {2}Theory}{1}{section.2}%
+\contentsline {section}{\numberline {3}Circuit Diagram}{2}{section.3}%
+\contentsline {section}{\numberline {4}Data}{3}{section.4}%
+\contentsline {section}{\numberline {5}Observations}{3}{section.5}%
+\contentsline {section}{\numberline {6}Results}{4}{section.6}%
+\contentsline {section}{\numberline {7}Error Analysis}{4}{section.7}%
+\contentsline {section}{\numberline {8}Conclusion}{4}{section.8}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

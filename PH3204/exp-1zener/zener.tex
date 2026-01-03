@@ -1,0 +1,47 @@
+
+\begin{figure}[H]
+    \centering
+    % \begin{circuitikz}[american voltages]
+    %     % Zener Diode with coloring
+    %     \draw
+    %     (5,-2) to [zzD, fill=cyan!40] (5,2)
+    %     % Current meter and upper connections
+    %     to [rmeter, t=mA, l_=$i_z$, fill=yellow!70] (5, 3)
+    %     to [short, -*] (5, 4)
+    %     to [rmeter, t=mA, l_=$i_s$, fill=yellow!70] (2, 4)
+    %     to [R, l^=$R_s$] (1, 4)
+    %     to [short] (0, 4)
+    %     % Battery connection
+    %     to [battery, l=$V_{\mathrm{in}}$] (0, -1)
+    %     to [short] (0, -2)
+    %     to [short] (5, -2)
+    %     % Load branch
+    %     (5, 4) to [short] (7, 4)
+    %     to [R, l=$R_C$] (7, 2)
+    %     to [rmeter, t=mA, l_=$i_L$, fill=yellow!70] (7, 1)
+    %     to [vR, l=$R_{\mathrm{L}}$] (7, -2)
+    %     to [short] (5, -2)
+    %     % Probing points
+    %     (7, 3.8) to [short, -*] (8.5, 3.8)
+    %     (7, -1.5) to [short, -*] (8.5, -1.5);
+    % \end{circuitikz}
+   \resizebox{0.5\textwidth}{!}{\begin{tikzpicture}
+	% Paths, nodes and wires:
+	\draw (12.75, 3.202) to[variable american resistor, l={$R_L$}, label distance=0.02cm] (12.75, 0.952);
+	\draw (5.5, 4.75) to[battery, l={$V_i(V)$}, label distance=0.02cm] (5.5, 4.5);
+	\draw (5.5, 6.75) to[american resistor, l={$R_s$}, label distance=0.02cm] (7.75, 6.75);
+	\draw (7.75, 6.75) to[ammeter, name=mA, l={$I_s (mA)$}, label distance=0.02cm] (9, 6.702);
+	\draw (10.75, 6.202) to[ammeter, l_={$I_z(mA)$}, label distance=0.02cm] (10.712, 5.5);
+	\draw (12.788, 3.904) to[ammeter, l_={$I_L(mA)$}, label distance=0.02cm] (12.75, 3.202);
+	\draw (10.712, 5.5) -| (10.75, 3.5);
+	\draw (9, 6.702) -| (10.75, 6.202) -| (10.75, 6.702) -| (12.75, 6.202);
+	\draw (12.75, 6.202) to[american resistor, l={$R_c$}, label distance=0.02cm] (12.75, 3.952);
+	\draw (5.5, 6.75) -| (5.5, 4.75);
+	\draw (5.5, 4.5) |- (12.75, 0.952);
+	\draw (10.75, 0.952) to[full ZZener diode, l={$D_z$}, label distance=0.02cm] (10.75, 3.5);
+	\draw (15, 6.25) to[voltmeter, l={$V_o(V)$}, label distance=0.02cm] (15, 1.25);
+	\draw (12.75, 6.202) |- (15, 6.25);
+	\draw (12.75, 1.25) -- (15, 1.25);
+\end{tikzpicture}}
+    \caption{Circuit Diagram for Load and Line Regulation Using a Zener Diode}
+\end{figure}

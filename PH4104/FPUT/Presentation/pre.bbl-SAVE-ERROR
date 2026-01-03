@@ -1,0 +1,70 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{Berman2005}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=66d0c67e470cefc02853654aaf9437cd}{%
+           family={Berman},
+           familyi={B\bibinitperiod},
+           given={G.\bibnamedelimi P.},
+           giveni={G\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=5487b13525001e2d4456ea0413d436f9}{%
+           family={Izrailev},
+           familyi={I\bibinitperiod},
+           given={F.\bibnamedelimi M.},
+           giveni={F\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {AIP Publishing}%
+      }
+      \strng{namehash}{1e1b85a8bc3458f80a09fdd8586e74f8}
+      \strng{fullhash}{1e1b85a8bc3458f80a09fdd8586e74f8}
+      \strng{fullhashraw}{1e1b85a8bc3458f80a09fdd8586e74f8}
+      \strng{bibnamehash}{1e1b85a8bc3458f80a09fdd8586e74f8}
+      \strng{authorbibnamehash}{1e1b85a8bc3458f80a09fdd8586e74f8}
+      \strng{authornamehash}{1e1b85a8bc3458f80a09fdd8586e74f8}
+      \strng{authorfullhash}{1e1b85a8bc3458f80a09fdd8586e74f8}
+      \strng{authorfullhashraw}{1e1b85a8bc3458f80a09fdd8586e74f8}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1089-7682}
+      \field{journaltitle}{Chaos: An Interdisciplinary Journal of Nonlinear Science}
+      \field{month}{3}
+      \field{number}{1}
+      \field{title}{The Fermi-Pasta-Ulam problem: Fifty years of progress}
+      \field{volume}{15}
+      \field{year}{2005}
+      \verb{doi}
+      \verb 10.1063/1.1855036
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1063/1.1855036
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1063/1.1855036
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

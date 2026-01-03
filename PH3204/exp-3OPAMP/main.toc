@@ -1,0 +1,15 @@
+\contentsline {section}{\numberline {1}Aim}{2}{section.1}%
+\contentsline {section}{\numberline {2}Theory}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Inverting Amplifier}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Non-Inverting Amplifier}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Adder}{3}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Subtractor}{4}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Inverting Amplifier}{4}{section.3}%
+\contentsline {section}{\numberline {4}Non-Inverting Amplifier}{5}{section.4}%
+\contentsline {section}{\numberline {5}Adder}{5}{section.5}%
+\contentsline {section}{\numberline {6}Subtractor}{6}{section.6}%
+\contentsline {section}{\numberline {7}Results}{6}{section.7}%
+\contentsline {section}{\numberline {8}Error Analysis}{6}{section.8}%
+\contentsline {section}{\numberline {9}Conclusion}{6}{section.9}%
+\contentsline {section}{\numberline {10}Supplementary}{7}{section.10}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

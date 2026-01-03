@@ -1,0 +1,11 @@
+\contentsline {section}{\numberline {1}Aim}{1}{section.1}%
+\contentsline {section}{\numberline {2}Theory}{1}{section.2}%
+\contentsline {section}{\numberline {3}Data and Analysis}{2}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Input Characteristics of an npn BJT}{2}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Output Characteristics of an npn BJT}{3}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Current gain of the BJT}{3}{section.4}%
+\contentsline {section}{\numberline {5}Results}{4}{section.5}%
+\contentsline {section}{\numberline {6}Sources of Error}{4}{section.6}%
+\contentsline {section}{\numberline {7}Conclusion}{4}{section.7}%
+\contentsline {section}{\numberline {8}Supplementary}{5}{section.8}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

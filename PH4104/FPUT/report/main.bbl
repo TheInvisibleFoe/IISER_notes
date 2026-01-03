@@ -1,0 +1,434 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{FPU}{report}{}{}
+      \name{author}{3}{}{%
+        {{hash=1d633020d2b7ae0ed2ca559a7b3a165a}{%
+           family={Fermi},
+           familyi={F\bibinitperiod},
+           given={Enrico},
+           giveni={E\bibinitperiod}}}%
+        {{hash=7d64a21d9c1a387cfb2bc124dffade0b}{%
+           family={Pasta},
+           familyi={P\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3b0d289e925175a0015e128797069d78}{%
+           family={Ulam},
+           familyi={U\bibinitperiod},
+           given={Stanislaw},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Los Alamos National Laboratory}%
+      }
+      \strng{namehash}{c1f444af585f36339118194b8e65bcef}
+      \strng{fullhash}{c1f444af585f36339118194b8e65bcef}
+      \strng{fullhashraw}{c1f444af585f36339118194b8e65bcef}
+      \strng{bibnamehash}{c1f444af585f36339118194b8e65bcef}
+      \strng{authorbibnamehash}{c1f444af585f36339118194b8e65bcef}
+      \strng{authornamehash}{c1f444af585f36339118194b8e65bcef}
+      \strng{authorfullhash}{c1f444af585f36339118194b8e65bcef}
+      \strng{authorfullhashraw}{c1f444af585f36339118194b8e65bcef}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Available as PDF}
+      \field{number}{LA-1940}
+      \field{title}{Studies of Nonlinear Problems}
+      \field{type}{Technical Report}
+      \field{year}{1955}
+    \endentry
+    \entry{Ford1992}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=fa7a64fad092b125adf8d616ba69dc04}{%
+           family={Ford},
+           familyi={F\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier BV}%
+      }
+      \strng{namehash}{fa7a64fad092b125adf8d616ba69dc04}
+      \strng{fullhash}{fa7a64fad092b125adf8d616ba69dc04}
+      \strng{fullhashraw}{fa7a64fad092b125adf8d616ba69dc04}
+      \strng{bibnamehash}{fa7a64fad092b125adf8d616ba69dc04}
+      \strng{authorbibnamehash}{fa7a64fad092b125adf8d616ba69dc04}
+      \strng{authornamehash}{fa7a64fad092b125adf8d616ba69dc04}
+      \strng{authorfullhash}{fa7a64fad092b125adf8d616ba69dc04}
+      \strng{authorfullhashraw}{fa7a64fad092b125adf8d616ba69dc04}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0370-1573}
+      \field{journaltitle}{Physics Reports}
+      \field{month}{5}
+      \field{number}{5}
+      \field{title}{The Fermi-Pasta-Ulam problem: Paradox turns discovery}
+      \field{volume}{213}
+      \field{year}{1992}
+      \field{pages}{271\bibrangedash 310}
+      \range{pages}{40}
+      \verb{doi}
+      \verb 10.1016/0370-1573(92)90116-h
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1016/0370-1573(92)90116-H
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1016/0370-1573(92)90116-H
+      \endverb
+    \endentry
+    \entry{Berman2005}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=66d0c67e470cefc02853654aaf9437cd}{%
+           family={Berman},
+           familyi={B\bibinitperiod},
+           given={G.\bibnamedelimi P.},
+           giveni={G\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=5487b13525001e2d4456ea0413d436f9}{%
+           family={Izrailev},
+           familyi={I\bibinitperiod},
+           given={F.\bibnamedelimi M.},
+           giveni={F\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {AIP Publishing}%
+      }
+      \strng{namehash}{1e1b85a8bc3458f80a09fdd8586e74f8}
+      \strng{fullhash}{1e1b85a8bc3458f80a09fdd8586e74f8}
+      \strng{fullhashraw}{1e1b85a8bc3458f80a09fdd8586e74f8}
+      \strng{bibnamehash}{1e1b85a8bc3458f80a09fdd8586e74f8}
+      \strng{authorbibnamehash}{1e1b85a8bc3458f80a09fdd8586e74f8}
+      \strng{authornamehash}{1e1b85a8bc3458f80a09fdd8586e74f8}
+      \strng{authorfullhash}{1e1b85a8bc3458f80a09fdd8586e74f8}
+      \strng{authorfullhashraw}{1e1b85a8bc3458f80a09fdd8586e74f8}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1089-7682}
+      \field{journaltitle}{Chaos: An Interdisciplinary Journal of Nonlinear Science}
+      \field{month}{3}
+      \field{number}{1}
+      \field{title}{The Fermi-Pasta-Ulam problem: Fifty years of progress}
+      \field{volume}{15}
+      \field{year}{2005}
+      \verb{doi}
+      \verb 10.1063/1.1855036
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1063/1.1855036
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1063/1.1855036
+      \endverb
+    \endentry
+    \entry{hhwolfram}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=ee82c41bd9fdbe2adafdbf5f5e0d6e3d}{%
+           family={Wolfram\bibnamedelima Research},
+           familyi={W\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Inc.},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{ee82c41bd9fdbe2adafdbf5f5e0d6e3d}
+      \strng{fullhash}{ee82c41bd9fdbe2adafdbf5f5e0d6e3d}
+      \strng{fullhashraw}{ee82c41bd9fdbe2adafdbf5f5e0d6e3d}
+      \strng{bibnamehash}{ee82c41bd9fdbe2adafdbf5f5e0d6e3d}
+      \strng{authorbibnamehash}{ee82c41bd9fdbe2adafdbf5f5e0d6e3d}
+      \strng{authornamehash}{ee82c41bd9fdbe2adafdbf5f5e0d6e3d}
+      \strng{authorfullhash}{ee82c41bd9fdbe2adafdbf5f5e0d6e3d}
+      \strng{authorfullhashraw}{ee82c41bd9fdbe2adafdbf5f5e0d6e3d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Henon-Heiles System}
+      \field{year}{2002}
+      \verb{urlraw}
+      \verb http://mathworld.wolfram.com/Henon-HeilesSystem.html
+      \endverb
+      \verb{url}
+      \verb http://mathworld.wolfram.com/Henon-HeilesSystem.html
+      \endverb
+    \endentry
+    \entry{tucktsingou}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=f25652383cc1cbcef05bc36a55d43e94}{%
+           family={Tuck},
+           familyi={T\bibinitperiod},
+           given={J.L},
+           giveni={J\bibinitperiod}}}%
+        {{hash=36ba2dc2dfa2dc27ad068a19818e70e3}{%
+           family={Menzel},
+           familyi={M\bibinitperiod},
+           given={M.T},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier BV}%
+      }
+      \strng{namehash}{976b206d7343777d0fcba85169d410ab}
+      \strng{fullhash}{976b206d7343777d0fcba85169d410ab}
+      \strng{fullhashraw}{976b206d7343777d0fcba85169d410ab}
+      \strng{bibnamehash}{976b206d7343777d0fcba85169d410ab}
+      \strng{authorbibnamehash}{976b206d7343777d0fcba85169d410ab}
+      \strng{authornamehash}{976b206d7343777d0fcba85169d410ab}
+      \strng{authorfullhash}{976b206d7343777d0fcba85169d410ab}
+      \strng{authorfullhashraw}{976b206d7343777d0fcba85169d410ab}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0001-8708}
+      \field{journaltitle}{Advances in Mathematics}
+      \field{month}{12}
+      \field{number}{3}
+      \field{title}{The superperiod of the nonlinear weighted string (FPU) problem}
+      \field{volume}{9}
+      \field{year}{1972}
+      \field{pages}{399\bibrangedash 407}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1016/0001-8708(72)90024-2
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1016/0001-8708(72)90024-2
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1016/0001-8708(72)90024-2
+      \endverb
+    \endentry
+    \entry{IzrailevChirikov1966}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=5487b13525001e2d4456ea0413d436f9}{%
+           family={Izrailev},
+           familyi={I\bibinitperiod},
+           given={F.\bibnamedelimi M.},
+           giveni={F\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=346c93f74b4ef223c1e41646c46d6737}{%
+           family={Chirikov},
+           familyi={C\bibinitperiod},
+           given={B.\bibnamedelimi V.},
+           giveni={B\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{4654782b65b7218aaf06d5fb29e85dcf}
+      \strng{fullhash}{4654782b65b7218aaf06d5fb29e85dcf}
+      \strng{fullhashraw}{4654782b65b7218aaf06d5fb29e85dcf}
+      \strng{bibnamehash}{4654782b65b7218aaf06d5fb29e85dcf}
+      \strng{authorbibnamehash}{4654782b65b7218aaf06d5fb29e85dcf}
+      \strng{authornamehash}{4654782b65b7218aaf06d5fb29e85dcf}
+      \strng{authorfullhash}{4654782b65b7218aaf06d5fb29e85dcf}
+      \strng{authorfullhashraw}{4654782b65b7218aaf06d5fb29e85dcf}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Dokl. Akad. Nauk SSSR}
+      \field{number}{1}
+      \field{title}{Statistical properties of a nonlinear string}
+      \field{volume}{166}
+      \field{year}{1966}
+      \field{pages}{57\bibrangedash 59}
+      \range{pages}{3}
+    \endentry
+    \entry{Palais}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=4816c6f820298c38756d7303e6f0cbbe}{%
+           family={Palais},
+           familyi={P\bibinitperiod},
+           given={Richard\bibnamedelima S.},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{4816c6f820298c38756d7303e6f0cbbe}
+      \strng{fullhash}{4816c6f820298c38756d7303e6f0cbbe}
+      \strng{fullhashraw}{4816c6f820298c38756d7303e6f0cbbe}
+      \strng{bibnamehash}{4816c6f820298c38756d7303e6f0cbbe}
+      \strng{authorbibnamehash}{4816c6f820298c38756d7303e6f0cbbe}
+      \strng{authornamehash}{4816c6f820298c38756d7303e6f0cbbe}
+      \strng{authorfullhash}{4816c6f820298c38756d7303e6f0cbbe}
+      \strng{authorfullhashraw}{4816c6f820298c38756d7303e6f0cbbe}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Symmetries of Solitons}
+      \field{year}{1997}
+      \verb{doi}
+      \verb 10.48550/ARXIV.DG-GA/9708004
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/dg-ga/9708004
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/dg-ga/9708004
+      \endverb
+      \keyw{Differential Geometry (math.DG),Exactly Solvable and Integrable Systems (nlin.SI),FOS: Mathematics,FOS: Mathematics,FOS: Physical sciences,FOS: Physical sciences,58F07,35Q51,35Q53,35Q55 (Primary)}
+    \endentry
+    \entry{Zabusky1965}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=87fe9146cd7b142949a9cfee4876193d}{%
+           family={Zabusky},
+           familyi={Z\bibinitperiod},
+           given={N.\bibnamedelimi J.},
+           giveni={N\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=334a02f197ab27339cc16da2599ab2be}{%
+           family={Kruskal},
+           familyi={K\bibinitperiod},
+           given={M.\bibnamedelimi D.},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society (APS)}%
+      }
+      \strng{namehash}{c4d2576634145b32f3bb934167457613}
+      \strng{fullhash}{c4d2576634145b32f3bb934167457613}
+      \strng{fullhashraw}{c4d2576634145b32f3bb934167457613}
+      \strng{bibnamehash}{c4d2576634145b32f3bb934167457613}
+      \strng{authorbibnamehash}{c4d2576634145b32f3bb934167457613}
+      \strng{authornamehash}{c4d2576634145b32f3bb934167457613}
+      \strng{authorfullhash}{c4d2576634145b32f3bb934167457613}
+      \strng{authorfullhashraw}{c4d2576634145b32f3bb934167457613}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0031-9007}
+      \field{journaltitle}{Physical Review Letters}
+      \field{month}{8}
+      \field{number}{6}
+      \field{title}{Interaction of “Solitons” in a Collisionless Plasma and the Recurrence of Initial States}
+      \field{volume}{15}
+      \field{year}{1965}
+      \field{pages}{240\bibrangedash 243}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1103/physrevlett.15.240
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1103/PhysRevLett.15.240
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1103/PhysRevLett.15.240
+      \endverb
+    \endentry
+    \entry{Huang}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=62f547896fdd964afa696ab3f717dfa8}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Kerson},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Nashville, TN}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons}%
+      }
+      \strng{namehash}{62f547896fdd964afa696ab3f717dfa8}
+      \strng{fullhash}{62f547896fdd964afa696ab3f717dfa8}
+      \strng{fullhashraw}{62f547896fdd964afa696ab3f717dfa8}
+      \strng{bibnamehash}{62f547896fdd964afa696ab3f717dfa8}
+      \strng{authorbibnamehash}{62f547896fdd964afa696ab3f717dfa8}
+      \strng{authornamehash}{62f547896fdd964afa696ab3f717dfa8}
+      \strng{authorfullhash}{62f547896fdd964afa696ab3f717dfa8}
+      \strng{authorfullhashraw}{62f547896fdd964afa696ab3f717dfa8}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{month}{4}
+      \field{title}{Statistical Mechanics}
+      \field{year}{1987}
+    \endentry
+    \entry{Khinchin2013}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=8a1224c8196e35911e629d38a124bfda}{%
+           family={Khinchin},
+           familyi={K\bibinitperiod},
+           given={A\bibnamedelima Ya},
+           giveni={A\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Dover Publications}%
+      }
+      \strng{namehash}{8a1224c8196e35911e629d38a124bfda}
+      \strng{fullhash}{8a1224c8196e35911e629d38a124bfda}
+      \strng{fullhashraw}{8a1224c8196e35911e629d38a124bfda}
+      \strng{bibnamehash}{8a1224c8196e35911e629d38a124bfda}
+      \strng{authorbibnamehash}{8a1224c8196e35911e629d38a124bfda}
+      \strng{authornamehash}{8a1224c8196e35911e629d38a124bfda}
+      \strng{authorfullhash}{8a1224c8196e35911e629d38a124bfda}
+      \strng{authorfullhashraw}{8a1224c8196e35911e629d38a124bfda}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{1}
+      \field{title}{Mathematical foundations of statistical mechanics}
+      \field{year}{2013}
+    \endentry
+    \entry{Ruelle1999}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=77374546b358b5dc2d6732508f9ed980}{%
+           family={Ruelle},
+           familyi={R\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Singapore, Singapore}%
+      }
+      \list{publisher}{1}{%
+        {World Scientific Publishing}%
+      }
+      \strng{namehash}{77374546b358b5dc2d6732508f9ed980}
+      \strng{fullhash}{77374546b358b5dc2d6732508f9ed980}
+      \strng{fullhashraw}{77374546b358b5dc2d6732508f9ed980}
+      \strng{bibnamehash}{77374546b358b5dc2d6732508f9ed980}
+      \strng{authorbibnamehash}{77374546b358b5dc2d6732508f9ed980}
+      \strng{authornamehash}{77374546b358b5dc2d6732508f9ed980}
+      \strng{authorfullhash}{77374546b358b5dc2d6732508f9ed980}
+      \strng{authorfullhashraw}{77374546b358b5dc2d6732508f9ed980}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{title}{Statistical mechanics: Rigorous results}
+      \field{year}{1999}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

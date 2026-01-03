@@ -1,0 +1,22 @@
+\begin{figure}[H]
+    \centering
+    \resizebox{0.5\textwidth}{!}{
+        \begin{tikzpicture}
+	% Paths, nodes and wires:
+	\draw (12.75, 3.202) to[variable american resistor, l={$R_L$}, label distance=0.02cm] (12.75, 0.952);
+	\draw (5.5, 4.75) to[battery, l={$V_i(V)$}, label distance=0.02cm] (5.5, 4.5);
+	\draw (12.788, 3.904) to[ammeter, l_={$I_L(mA)$}, label distance=0.02cm] (12.75, 3.202);
+	\draw (12.75, 6.202) to[american resistor, l={$R_c$}, label distance=0.02cm] (12.75, 3.952);
+	\draw (5.5, 6.75) -| (5.5, 4.75);
+	\draw (5.5, 4.5) |- (12.75, 0.952);
+	\draw (15, 5.798) to[voltmeter, l={$V_o(V)$}, label distance=0.02cm] (15, 1.25);
+	\draw (12.75, 5.75) |- (15, 5.798);
+	\draw (12.75, 1.25) -- (15, 1.25);
+	\node[shape=rectangle, draw, line width=1pt, inner sep=0, minimum width=0.965cm, minimum height=0.965cm](Rect1) at (9.5, 8){} node[anchor=south] at (Rect1.north){$IC  7805$};
+	\draw (9.25, 7.5) |- (5.5, 6.75);
+	\draw (9.5, 7.5) -- (9.5, 1);
+	\draw (12.75, 6.202) -| (9.75, 7.5);
+\end{tikzpicture}
+    }
+    \caption{Circuit Diagram for Load and Line Regulation Using a IC 7805}
+\end{figure}

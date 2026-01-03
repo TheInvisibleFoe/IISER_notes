@@ -1,0 +1,46 @@
+\begin{circuitikz}
+    % Draw the AND gate
+    \node[ieeestd nor port] (nor) at (0,0) {NOR};
+
+    % Draw the OR gate
+    \node[ieeestd and port] (and) at (0,-4) {AND};
+
+    % Draw the NAND gate
+    \node[ieeestd or port] (or) at (3,-2) {OR};
+
+    % Draw the NOR gate
+    \node[ieeestd nand port] (nand) at (6,-1) {NAND};
+
+    % Draw the XOR gate
+    \node[ieeestd and port] (and2) at (6,-3.72) {AND};
+
+    % Draw the final AND gate
+    \node[ieeestd xor port] (xor) at (9,-2) {XOR};
+
+    % Connect the AND gate to the NAND gate
+    \draw (nor.in 2) -- ++(-0,-1) |- (or.in 1);
+    \draw (nor.out) -- ++(0.5,0) |- (nand.in 1);
+
+    % Connect the OR gate to the NAND gate
+    \draw (and.out) -- ++(0.5,0) |- (or.in 2);
+    \draw (and.out) -- ++(0.5,0) |- (and2.in 2);
+
+    % Connect the NAND gate to the NOR gate
+    \draw (or.out) -- ++(0.5,0) |- (nand.in 2);
+
+    % Connect the NAND gate to the XOR gate
+    \draw (or.out) -- ++(0.5,0) |- (and2.in 1);
+
+    % Connect the NOR gate to the final AND gate
+    \draw (nand.out) -- ++(0.5,0) |- (xor.in 1);
+
+    % Connect the XOR gate to the final AND gate
+    \draw (and2.out) -- ++(0.5,0) |- (xor.in 2);
+
+    % Label inputs and outputs
+    \draw (nor.in 1) -- ++(-1,0) node[left] {A};
+    \draw (nor.in 2) -- ++(-1,0) node[left] {B};
+    \draw (and.in 1) -- ++(-1,0) node[left] {C};
+    \draw (and.in 2) -- ++(-1,0) node[left] {D};
+    \draw (xor.out) -- ++(1,0) node[right] {Q};
+\end{circuitikz}

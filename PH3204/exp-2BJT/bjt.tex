@@ -1,0 +1,23 @@
+
+\begin{figure}[H]
+	\centering
+	\resizebox{0.75\textwidth}{!}{
+\begin{tikzpicture}
+	
+	% Paths, nodes and wires:
+	\draw node[npn, xscale=1.41, yscale=1.41] at (8.84, 5.25) {};
+	\draw (8, 5.25) to[american resistor, l={$R_B$}, label distance=0.02cm] (5, 5.25);
+	\draw (3.5, 5.25) to[battery, l={$V_{BB}$}, label distance=0.02cm] (3.5, 2.75);
+	\draw (7.5, 5.25) to[voltmeter, l={$V_{BE}$}, label distance=0.02cm] (7.5, 2.75);
+	\draw (10, 6) to[voltmeter, l={$V_{CE}$}, label distance=0.02cm] (10, 2.75);
+	\draw (8.84, 6.336) -| (10, 6);
+	\draw (8.84, 4.164) |- (10, 2.75) -- (5, 2.75) |- (3.5, 2.75);
+	\draw (3.5, 5.25) to[ammeter, l={$I_b(\mu A)$}, label distance=0.02cm] (5, 5.25);
+	\draw (12.2, 6.3) to[ammeter, l={$I_c  (mA)$}, label distance=0.02cm] (13.9, 6.3);
+	\draw (10, 6.3) to[american resistor, l={$R_c$}, label distance=0.02cm] (12.2, 6.3);
+	\draw (13.9, 6.3) to[battery, l={$V_{cc}(V)$}, label distance=0.02cm] (13.9, 2.8);
+	\draw (10, 2.75) -| (13.9, 2.8);
+	\node[shape=circle, draw, line width=1pt, inner sep=0, minimum width=1.512cm] at (8.774, 5.25){};
+\end{tikzpicture}}
+\caption{Circuit diagram of an npn BJT.}
+\end{figure}

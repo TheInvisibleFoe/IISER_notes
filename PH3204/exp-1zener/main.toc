@@ -1,0 +1,17 @@
+\contentsline {section}{\numberline {1}Aim}{2}{section.1}%
+\contentsline {section}{\numberline {2}Theory}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Zener Diode}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}IC 7805}{3}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Zener Diode}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Line Regulation}{3}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Load Regulation}{4}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Approaching Breakdown Region}{4}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}With Rc}{5}{subsubsection.3.2.2}%
+\contentsline {section}{\numberline {4}IC 7805}{6}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Line Regulation}{6}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Load Regulation}{7}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Results}{7}{section.5}%
+\contentsline {section}{\numberline {6}Sources of Error}{8}{section.6}%
+\contentsline {section}{\numberline {7}Conclusion}{8}{section.7}%
+\contentsline {section}{\numberline {8}Supplementary}{9}{section.8}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
