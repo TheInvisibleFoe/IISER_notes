@@ -125,6 +125,7 @@
 #let fl= $frak(L)$
 #let fz= $frak(Z)$
 #let infty = sym.infinity
+#let int = sym.integral
 
 // Define a macro to disable numbering in a section and exclude it
 // from the outline

@@ -45,6 +45,11 @@
 }
 
 
+#v(2em)
+#figure(
+  image("assets/cartoon.jpeg",width:60%)
+)
+
 #pagebreak()
 #outline(
   title: [Table of Contents(By Topic)],
@@ -63,5 +68,5 @@
 #include "lec01.typ"
 // #show: appendix
 // #include "appendix.typ"
-// #pagebreak()
+#pagebreak()
 #bibliography("refs.bib")
