@@ -47,6 +47,8 @@
   "theorem",
   "Theorem",
   fill: rgb("#e8e8f8"),
+  stroke: rgb("#000000") + 1pt,
+  radius: 0.0em,
 )
 #let lemma = thmbox(
   "theorem", // Lemmas use the same counter as Theorems
@@ -90,10 +92,12 @@
 
 // Examples and remarks are not numbered
 #let example = thmplain("example", "Example").with(numbering: none)
-#let remark = thmplain(
+#let remark = thmbox(
   "remark",
   "Remark",
-  inset: 0em,
+  stroke: rgb("a1111a") + 1pt,
+  radius: 0.0em,
+  inset: 1.5em,
 ).with(numbering: none)
 
 // Proofs are attached to theorems, although they are not numbered
@@ -126,6 +130,8 @@
 #let fz= $frak(Z)$
 #let infty = sym.infinity
 #let int = sym.integral
+#let oint = sym.integral.cont
+
 
 // Define a macro to disable numbering in a section and exclude it
 // from the outline

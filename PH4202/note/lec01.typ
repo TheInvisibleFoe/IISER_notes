@@ -32,7 +32,7 @@ $
   u(r) = cases(infinity quad & r < r_0, -u_0(r_0/r)^6 quad &r >= r_0)
 $<hard-sph-pot>
 #figure(
-  image("assets/LJ_and_HS_Potentials.png", width: 100%),
+  image("assets/LJ_and_HS_Potentials.png", width: 80%),
   caption: "Lennard-Jones Potential and Hard-Sphere Potential",
 )
 
@@ -98,21 +98,23 @@ $
 $
 Note that the potential is infinite when the particles are closer than $r_0$. This causes a divergence in the integral over $r in [0, r_0)$. This is very simply taken care of. Note that the Boltzmann factor $exp(-beta U)$ becomes zero when $U$ is infinite. Thus, the region of integration where the potential is infinite does not contribute to the integral. Thus, we can simply change the limits of integration to $r in [r_0, infty)$. Thus, the integral becomes(using spherical symmetry),
 $
-  int d^3r u(r) &= int_(r_0)^(infty) 4 pi r^2 d r (-u_0 (r_0 / r)^s) \
-  &= -4 pi u_0 r_0^s int_(r_0)^(infty) r^(2-s) d r\
+  int d^3r u(r) &= int_(r_0)^(infty) 4 pi r^2 d r (-u_0 (r_0 / r)^s) = -4 pi u_0 r_0^s int_(r_0)^(infty) r^(2-s) d r\
   &= (4 pi u_0 r_0^3) / (s-3)
 $
 where we have assumed that $s > 3$ to ensure convergence of the integral. Thus, the potential energy term becomes,
 $
-  U({|q_i - q_j|}) &approx (N^2) / (2V) (- 4 pi u_0 r_0^3) / (s-3) \
-  &= a (N^2) / V
+  U({|q_i - q_j|}) &approx (N^2) / (2V) (- 4 pi u_0 r_0^3) / (s-3) = a (N^2) / V
 $
 where $a = (2 pi u_0 r_0^3)/(s-3)$. Thus, the partition function becomes,
 $
   Z &= (1 / N! lambda^(-3N)) int d^(3N)r exp(beta a (N^2)/V) \
   &= (1 / N! lambda^(-3N)) exp(beta a (N^2/V)) int d^(3N)r \
 $
-The integral over the positions is not simply the volume to the power $N$ because of the hard-sphere nature of the particles. The particles cannot come closer than a distance $r_0$ to each other. Consider adding in the particles one by one. The first particle can be placed anywhere in the volume $V$. The second particle can be placed anywhere in the volume $V$ except for a sphere of radius $r_0$ around the first particle. Thus, the available volume for the second particle is $V - (4/3) pi (r_0/2)^3 = V- Omega$. The distance of closest approach between two particles is $r_0$, so the volume of each particle is considered to be a sphere of radius $r_0/2$.
+The integral over the positions is not simply the volume to the power $N$ because of the hard-sphere nature of the particles. The particles cannot come closer than a distance $r_0$ to each other. Consider adding in the particles one by one. The first particle can be placed anywhere in the volume $V$. The second particle can be placed anywhere in the volume $V$ except for a sphere of radius $r_0$ around the first particle. Thus, the available volume for the second particle is $V - (4/3) pi (r_0)^3 = V- Omega$, [cf. @volexcfig]. Note that $Omega$ is 8 times the volume of a particle. The distance of closest approach between two particles is $r_0$, so the volume of each particle is considered to be a sphere of radius $r_0/2$.
+#figure(
+  image("assets/vol_exclusion.png", width: 50%),
+  caption: [Excluded Volume for Hard-Sphere Particles. Source: @Reif1965],
+)<volexcfig>
 $
   int d^(3N)r &approx V (V - Omega) (V - 2 Omega) ... (V - (N-1) Omega) \
   &= V^N (1 - (Omega / V)) (1 - 2(Omega / V)) ... (1 - (N-1)(Omega / V)) \
@@ -144,5 +146,5 @@ Note that $b$ is four times the volume occupied by a particle. This is the Van d
 #remark("Derivation")[
   The Derivation is from "Fundamentals of Statistical and Thermal Physics" by F. Reif @Reif1965 under the alternate derivation of the Van der Waals Equation of state. However, there are some differences. Reif progresses in a different fashion compared to us. He first considers the hard-sphere potential to conclude that for each particle, an excluded volume $V_x$ is present. This excluded volume is the volume around each particle where no other particle can enter due to the hard-sphere nature of the particles. Now he assumes in the available volume $V-V_x$, the potential is on an average constant. This is equivalent to our mean-field approximation, where we assumed the density to be uniform. He then goes on to find what $V_x$ should be. However, his calculation makes an assumption less than ours.
 
-  He does not assume the dilute limit $(N Omega)/V << 1$ to calculate the available volume for $N$ particles. We place the particles one by one, and for each particle, we assume that the other $N-1$ particles are already placed. Reif assumes that the particles are added in pairs(comparing them to molecules) simultaneously. However, he does claim that his arguments are quite crude in nature.
+  He does not assume the dilute limit $(N Omega)/V << 1$ to calculate the available volume for $N$ particles. We place the particles one by one, and for each particle, we assume that the other $N-1$ particles are already placed. Reif assumes that the particles are added simultaneously, which makes lesser sense to me. However, he does claim that his arguments are quite crude in nature.
 ]

@@ -66,6 +66,13 @@
 
 #lec("Introduction and Van der Waals equation of state")
 #include "lec01.typ"
+
+#pagebreak()
+#lec("Convex Intruders and Phase transitions.")
+#include "lec02.typ"
+#pagebreak()
+#lec("Phase coexistence Curves and the Maxwell Construction.")
+#include "lec03.typ"
 // #show: appendix
 // #include "appendix.typ"
 #pagebreak()
