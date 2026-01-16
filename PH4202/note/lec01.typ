@@ -89,8 +89,7 @@ $
 $
 where we have used the fact that the integral over the centre of mass coordinate $R$ simply gives us a factor of the volume $V$. Thus, the potential energy term becomes,
 $
-  U &approx (n^2) / 2 V int d^3r u(r) \
-  &= (N^2) / (2V) int d^3r u(r)
+  U &approx (n^2) / 2 V int d^3r u(r) = (N^2) / (2V) int d^3r u(r)
 $
 The pair potential function used in this case is the hard-sphere potential defined in <hard-sph-pot>, except we use a general exponent $s$ instead of $6$ for the attractive part.
 $
@@ -138,8 +137,7 @@ $
 $
 where
 $
-  a &= (2 pi u_0 r_0^3) / (s-3) \
-  b &= Omega / 2 = (2 / 3) pi r_0^3
+  a &= (2 pi u_0 r_0^3) / (s-3) quad;quad  b &= Omega / 2 = (2 / 3) pi r_0^3
 $
 Note that $b$ is four times the volume occupied by a particle. This is the Van der Waals equation of state. This equation of state can also be derived using other methods, such as the cluster expansion method, cf. @Kardar2007. Instead of using a mean field approximation, he expands out the Boltzmann factor of the interacting terms in powers of some function of density, giving us the virial expansion. He then truncates the series at the second virial coefficient. This gives the same result as the mean-field approximation.
 

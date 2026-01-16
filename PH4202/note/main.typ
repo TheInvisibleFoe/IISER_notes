@@ -73,6 +73,8 @@
 #pagebreak()
 #lec("Phase coexistence Curves and the Maxwell Construction.")
 #include "lec03.typ"
+#lec("Yang-Lee zeros")
+#include "lec04.typ"
 // #show: appendix
 // #include "appendix.typ"
 #pagebreak()

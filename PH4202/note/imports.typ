@@ -75,6 +75,14 @@
   fill: rgb("#e8f8e8"),
 )
 
+#let amp = thmbox(
+  "assumption", // Definitions use their own counter
+  "Assumption",
+  fill: rgb("#ffffff"),
+  stroke: rgb("#000000") + 1pt,
+  radius: 0.0em,
+  base:none,
+)
 #let result = thmbox(
   "result", // Definitions use their own counter
   "Result",
@@ -131,6 +139,8 @@
 #let infty = sym.infinity
 #let int = sym.integral
 #let oint = sym.integral.cont
+#let to =$-->$
+#let prod =$product$
 
 
 // Define a macro to disable numbering in a section and exclude it

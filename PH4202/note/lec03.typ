@@ -53,7 +53,7 @@ Another signature of first order phase transitions is nucleation and metastabili
   caption: [Gibbs free energy vs Temperature plot showing discontinuity in entropy during phase transition. Source: @Seth.]
 )<gibbentropy>
 
-== Metastable States and Nucleation
+== Metastable States and Nucleation($dagger$)
 During the concave envelope construction, we also obtain metastable states. These are states which are locally stable but globally unstable. We shall understand metastable states and nucleation in the context of liquid to gas phase transition.
 
 #figure(
@@ -105,7 +105,7 @@ $
 $
 where $scr(F)(beta) = beta F(beta)$ and $scr(S)(E) = S(E)/k_B$, which is a legendre transform pair.
 
-#remark("Legendre Transform")[
+#remark([Legendre Transform($dagger$)])[
 
   There are two conventions for Legendre transforms cf @Deserno. One transforms convex functions to convex functions and the other transforms convex functions to concave functions. If we follow the first convention, we have,
   $
@@ -135,7 +135,7 @@ $
   Phi = U - T S - mu N
 $
 where $Phi = - k_B T ln cal(Z)$ is the grand potential.
-#remark("Grand potential")[
+#remark([Grand potential($dagger$)])[
   Just for the fun of it, we can find the legendre transform relation between grand potential and entropy in the involutive form. We have,
   $
     scr(Phi)(beta, eta) = beta E(beta, eta) + eta N(beta, eta) - scr(S)(E(beta, eta), N(beta, eta))
@@ -153,16 +153,36 @@ The equation of state for the grand canonical ensemble is given by,
 $
   beta P V = ln cal(Z)(T,V,mu) = ln(sum_(N=0)^infty exp(V psi(n)))
 $
-where $psi(n) = n ln(V- Omega/2) + beta a n^2 + Delta n$ and $n = N/V$ is the number density and $Delta = 1 + beta mu - ln(lambda^3)$, where $lambda$ is the thermal wavelength. Here, $a$ is a constant from the van der Waals equation of state. Since in the thermodynamic limit, $V --> infty$, we can use the saddle point approximation to evaluate the sum. The saddle point approximation states that for large $V$,
+where 
 $
-  P V = k_B T V psi(n^*)
+  psi(n) = n ln(n^(-1)- Omega/2) + beta a n^2 + Delta n 
 $
-where $n^*$ is the value of $n$ which maximizes $psi(n)$. Suppose we have two peaks near the phase transition point. The two densities $n_"liq"$ and $n_"gas"$ correspond to the two phases. The phase transition occurs when the two peaks have the same height. As we vary temperature and pressure, the heights of the two peaks change. At the phase transition point, the two peaks have the same height. Since we take the thermodynamic limit, the system jumps from one peak to another peak as we cross the phase transition point. This jump corresponds to the phase transition from liquid to gas. This is how phase transitions can be observed from the probability distributions in statistical mechanics. This complete derivation is given in @Kardar2007.
+and $n = N/V$ is the number density and $Delta = 1 + beta mu - ln(lambda^3)$, where $lambda$ is the thermal wavelength. Here, $a$ is a constant from the van der Waals equation of state. Since in the thermodynamic limit, $V --> infty$, we can use the saddle point approximation to evaluate the sum. The saddle point approximation states that for large $V$,
+$
+  P_"g.c." V = k_B T V psi(n^*)
+$
+where $n^*$ is the value of $n$ which maximizes $psi(n)$. Here, we have denoted the pressure to be the grand canonical pressure. Generally, since the ensembles are equivalent, the grand canonical pressure is equal to the canonical pressure. 
+
+The densities $n_alpha$ maximizing $psi(n)$ satisfy,
+$
+  & lr((pdv(psi,n))_(T,mu)|)_n_alpha = 0 \
+  ==>& Delta = - ln(n_alpha^(-1) - Omega/2) + 1/(1- n_alpha Omega\/2) - 2 beta a n_alpha \
+$
+This equation admits multiple solutions for $n_alpha$ near the phase transition point. However, In the thermodynamic limit, the system chooses the density $n^*$ which maximizes $psi(n)$. So when there are multiple solutions, the maximum contribution comes from the density which gives the highest value of $psi(n)$. In that case the grand canonical pressure is equal to the canonical pressure at that density. This formalism serves to augment our previous graphical discussion regarding phase transitions.
+
+Suppose we have two peaks near the phase transition point. The two densities $n_"liq"$ and $n_"gas"$ correspond to the two phases. The phase transition occurs when the two peaks have the same height. As we vary temperature and pressure, the heights of the two peaks change. At the phase transition point, the two peaks have the same height. We denote this point with the temperature $T^*$ Since we take the thermodynamic limit, the system jumps from one peak to another peak as we cross the phase transition point. This jump corresponds to the phase transition from liquid to gas. This is how phase transitions can be observed from the probability distributions in statistical mechanics. This complete derivation is given in @Kardar2007. As a result we obtain
+$
+  ln cal(Z) = lim_(V --> infty) ln(e^(beta V P_"liq") + e^(beta V P_"gas")) = cases(beta V P_"liq" quad  &"if" T>T^*, beta V P_"gas" quad  &"if" T<T^* )
+$
 
 
 
 As an end to this lecture on phase coexistence curves and Maxwell construction, we arrive at a rather remarkable conclusion.
 #theorem("Phase transitions")[
-  Phase transitions can only take place for infinite systems.
+ There are no phase transitions in finite systems. 
 ]
 We observed a specific case here. The general heuristic argument is as follows. In finite systems, the partition functions are sums of individual microstate probabilities, which are analytic in their parameters. As a result, the free energies are also analytic in their parameters. However, phase transitions are marked by non-analyticities in free energies. Thus, phase transitions can only take place in infinite systems, where taking some sort of limit can lead to non-analyticities in free energies.
+
+In finite systems, we observe what are called _crossovers_. Instead of abrupt jumps in thermodynamic quantities, we observe smooth transitions. However, as we take the thermodynamic limit, these crossovers become sharper and sharper, leading to non-analyticities in free energies and abrupt phase transitions. 
+
+
