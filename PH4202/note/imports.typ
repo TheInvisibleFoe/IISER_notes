@@ -1,3 +1,4 @@
+#import "@preview/cetz:0.3.1"
 #import "@preview/physica:0.9.5": *
 #import "@preview/ctheorems:1.1.3": *
 #import "@preview/subpar:0.2.2"
@@ -123,11 +124,17 @@
 ).with(numbering: none)
 
 
+#let app-counter = counter("app")
+#let app(title) = {
+  app-counter.step()
+  context { heading(numbering:none, [Appendix #app-counter.display(): #title], supplement : [Appendix]) }
+  // let num = context app-counter
+  // label(str(num))
+}
 // Macros for commonly used symbols and constructs
 
 // align* environments
 #let nonum(eq) = math.equation(block: true, numbering: none, eq)
-
 
 // Basic Symbols
 #let ot = sym.times.o
@@ -141,6 +148,19 @@
 #let oint = sym.integral.cont
 #let to =$-->$
 #let prod =$product$
+
+#let dU = $dd(U)$
+#let dV = $dd(V)$
+#let dS = $dd(S)$
+#let dM = $dd(M)$
+#let dA = $dd(A)$
+#let dT = $dd(T)$
+#let dh = $dd(h)$
+#let kb = $k_B$
+
+#let ss = $sigma$
+#let aa = $alpha$
+#let bb = $beta$
 
 
 // Define a macro to disable numbering in a section and exclude it

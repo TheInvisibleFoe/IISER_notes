@@ -64,6 +64,8 @@
 )
 #pagebreak()
 
+#set math.equation(supplement:"Eq.")
+
 #lec("Introduction and Van der Waals equation of state")
 #include "lec01.typ"
 
@@ -75,7 +77,17 @@
 #include "lec03.typ"
 #lec("Yang-Lee zeros")
 #include "lec04.typ"
+#lec("Critical exponents of the Van Der Waals Gas.")
+#include "lec05.typ"
+#lec("Phase Transitions, Critical Exponents and Critical Opalescence.")
+#include "lec06.typ"
+#lec("Introduction to Mean Field Ising Model")
+#include "lec07.typ"
 // #show: appendix
 // #include "appendix.typ"
 #pagebreak()
 #bibliography("refs.bib")
+#pagebreak()
+
+
+#include "app01.typ"
