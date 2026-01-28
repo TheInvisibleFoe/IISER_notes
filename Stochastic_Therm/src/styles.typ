@@ -36,7 +36,7 @@
   main-font: "New Computer Modern",
   /// The font of the headings (of Sans Type)
   /// -> string | array
-  title-font: ("New Computer Modern Sans", "PT Sans", "DejaVu Sans"),
+  title-font: ("CMU Sans Serif", "PT Sans", "DejaVu Sans"),
   /// The font of the raw text or codeblocks.
   /// -> string | array
   raw-font: "DejaVu Sans Mono",
@@ -143,6 +143,66 @@
 
   show outline.entry.where(level: 1): set text(font: title-font)
 
+  // Link Formatting. Formatting similar to hyperref in LaTeX.
+  show link: set text(blue)
+  show link: this => {
+    let show-type = "filled" // "box" or "filled", see below
+    let label-color = blue
+    let default-color = rgb(40, 1, 240)
+
+    if show-type == "box" {
+      if type(this.dest) == label {
+        // Make the box bound the entire text:
+        set text(bottom-edge: "bounds", top-edge: "bounds")
+        box(this, stroke: label-color + 1pt)
+      } else {
+        set text(bottom-edge: "bounds", top-edge: "bounds")
+        box(this, stroke: default-color + 1pt)
+      }
+    } else if show-type == "filled" {
+      if type(this.dest) == label {
+        text(this, fill: label-color)
+      } else {
+        text(this, fill: default-color)
+      }
+    } else {
+      this
+    }
+  }
+  show cite: it => {
+    // Only color the number, not the brackets.
+    show regex("\d+"): set text(fill: blue)
+    // or regex("[\p{L}\d+]+") when using the alpha-numerical style
+    it
+  }
+
+  show ref: it => {
+    if it.element == none {
+      // This is a citation, which is handled above.
+      return it
+    }
+
+    // Only color the number, not the supplement.
+    show regex("[\d.]+"): set text(fill: blue)
+    it
+  }
+
+  // Updates the equation counter section wise.
+  // Resets the equation counter at every level 1 heading.
+  show heading.where(level: 1): it => {
+    counter(math.equation).update(0)
+    it
+  }
+
+  // Equation Numbering 1.1 style
+  set math.equation(
+    numbering: (..nums) => {
+      let section = counter(heading).get().first()
+      numbering("(1.1)", section, ..nums)
+    },
+  )
+  set quote(block: true)
+
   body
 }
 
@@ -198,4 +258,3 @@
   }
   content
 }
-

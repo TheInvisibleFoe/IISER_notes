@@ -1,4 +1,4 @@
-#import "utils.typ":*
+#import "utils.typ": *
 /// This function constructs the the frontmatter of the thesis.
 /// -> content
 #let maketitle(
@@ -14,16 +14,16 @@
   authors: none,
   /// Displays the date if it is not none.
   /// -> content | string
-  date:datetime.today().display("[day] [month repr:long] [year]"),
+  date: datetime.today().display("[day] [month repr:long] [year]"),
   /// Sets the prefix that is shown before the date.
   /// -> content | string
-  date-prefix:"Date:",
+  date-prefix: "Date:",
   /// Defines the fields/keys, that the authors need to have.
   /// -> array
-  fields: ("email", "supervisor"),
+  fields: ("email", "sup"),
   /// Sets the prefixes, that are shown before their actual value, which is taken from the authors dictionary.
   /// -> array
-  field-prefixes: ("", "Supervisor:"),
+  field-prefixes: ("Email:", ""),
   /// If true writes the title and the first authors name to the pdfs metadata.
   /// -> bool
   metadata: true,
@@ -49,23 +49,24 @@
   authors = authors.map(
     _parse-author.with(
       fields: fields,
-      field-prefixes: field-prefixes
-      )
-    )
-  let cols = if authors.len()<= 3 {(1fr,)*authors.len()} else {(1fr,)*3}
-  
+      field-prefixes: field-prefixes,
+    ),
+  )
+  let cols = if authors.len() <= 3 { (1fr,) * authors.len() } else { (1fr,) * 3 }
+
   align(
-    center, {
-      set text(font:title-font, size:large-size)
+    center,
+    {
+      set text(font: title-font, size: large-size)
       v(50pt, weak: false)
       repr-thesis-type
       v(25pt, weak: true)
       repr-thesis-title
       v(25pt, weak: true)
 
-      set text(size:font-size)
+      set text(size: font-size)
       grid(
-        columns: cols,align: center,
+        columns: cols, align: center,
         ..authors,
       )
       if date != none {
@@ -81,16 +82,16 @@
   content,
   /// The font, which is only used for the heading of the abstract paragraph.
   /// -> string
-  font:title-font,
+  font: title-font,
   /// The title which the abstract paragraph should have.
-  /// -> content | string 
-  title:[Abstract]
+  /// -> content | string
+  title: [Abstract],
 ) = {
-    // English abstract
-    v(50pt, weak: true)
-    set text(small-size)
-    show: pad.with(x: 1cm)
-    align(center, text(font: font, strong(title)))
-    v(6pt, weak: true)
-    content
+  // English abstract
+  v(50pt, weak: true)
+  set text(small-size)
+  show: pad.with(x: 1cm)
+  align(center, text(font: font, strong(title)))
+  v(6pt, weak: true)
+  content
 }

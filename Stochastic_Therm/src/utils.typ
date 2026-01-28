@@ -1,15 +1,15 @@
 /// The main font, which is used througaaaut the document.
-/// -> array 
+/// -> array
 #let main-font = ("New Computer Modern",)
 /// The fonts, which are used for the headings (Sans type fonts).
 /// -> array
-#let title-font = ("New Computer Modern Sans", "PT Sans", "DejaVu Sans")
+#let title-font = ("CMU Sans Serif", "PT Sans", "DejaVu Sans")
 /// The font used for all raw and code text elements
 /// -> array
 #let raw-font = ("DejaVu Sans Mono",)
 /// The size of the text. All other Textsizes are relative to this lenght.
 /// -> length
-#let normal-size =11pt
+#let normal-size = 11pt
 /// The size of footnotes
 /// -> length
 #let footnote-size = 8 / 11 * normal-size
@@ -27,8 +27,8 @@
   title,
   start: 1,
   style: emph,
-  size:normal-size
-) = context{
+  size: normal-size,
+) = context {
   // Retrieve the current page number
   let pageNumber = counter(page).at(here()).first()
   // no header before the starting page
@@ -53,8 +53,8 @@
 
 #let _parse-author(
   author,
-  fields: ("email", "supervisor"),
-  field-prefixes: ("", "Supervisor.:"),
+  fields: ("email", "sup"),
+  field-prefixes: ("Email:", ""),
 ) = {
   author.name + v(.8em)
   for (field, prefix) in fields.zip(field-prefixes) [
@@ -72,11 +72,14 @@
 /// -> content
 #let fancy-latex = {
   set text(font: "New Computer Modern")
-  box(width: 2.55em, {
-    [L]
-    place(top, dx: 0.3em, text(size: 0.7em)[A])
-    place(top, dx: 0.7em)[T]
-    place(top, dx: 1.26em, dy: 0.22em)[E]
-    place(top, dx: 1.8em)[X]
-  })
+  box(
+    width: 2.55em,
+    {
+      [L]
+      place(top, dx: 0.3em, text(size: 0.7em)[A])
+      place(top, dx: 0.7em)[T]
+      place(top, dx: 1.26em, dy: 0.22em)[E]
+      place(top, dx: 1.8em)[X]
+    },
+  )
 }
