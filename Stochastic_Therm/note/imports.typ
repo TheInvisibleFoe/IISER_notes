@@ -155,6 +155,7 @@
                                     }
 
 
+                                    
 // Basic Symbols
 #let ot = sym.times.o
 #let xx = $bold(x)$
@@ -180,6 +181,22 @@
 }
 #let pexpval = lol
 
+// #let defn(..args) = {
+//   let tit = args.pos().at(0, default: none)
+//   let body = args.pos().at(1, default: none)
+  
+//   colorbox(
+//   title: tit,
+//   color: (
+//     fill: rgb("#f0f8ff"),
+//     stroke: rgb("#00bfff"),
+//     title: rgb("#002366")
+//   ),
+//   radius: 4pt,
+//   width: auto
+// )[
+//   #body
+// ]}
 // stoch therm
 #let aep = $dot(S)$
 #let kx = $k_(x x')$
@@ -188,14 +205,21 @@
 #let ph = $hat(p)$
 
 #let wn = $hat(xi)(t)$
+#let wno(t) = {$hat(xi)(#t)$}
 #let fg = $cal(F)(xh,t)$
 #let pxs = $p^"ss"_(x)$
 #let pps = $p^"ss"_(x')$
-#let svh = $circle.small$
-#let ito = $circle.filled.tiny$
+#let svh = $med circle.small med$
+#let ito = $med circle.filled.tiny med$
 #let pr = $p(x;t)$
-#let lfp = $cal(L)$
+#let lfp = $bold(frak(L))$
+#let odr = $D^((1)) (x,t)$
+#let odiff = $D^((2)) (x,t)$
 
+#let vbu(input) = {$upright(bold(#input))$}
+
+#let mdr = $vb(D)^((1)) (vb(x),t)$
+#let mdiff = $vbu(D)^((2))(vb(x),t) $
 // trying out macros for greek letter.
 #let aa = $alpha$
 #let bb = $beta$

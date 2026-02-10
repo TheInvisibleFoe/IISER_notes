@@ -5,6 +5,7 @@
 // Some Macros are also defined in the import file.
 #import "imports.typ": *
 
+#import "@preview/colorful-boxes:1.4.3"
 #show: codly-init.with()
 #codly(languages: (python: (name: "Python", color: rgb("#006699"))))
 // No idea what this does, but it seems fancy.
@@ -41,7 +42,7 @@
   lec-counter.step()
   context { heading(numbering:none, [Chapter #lec-counter.display(): #title], supplement : [Chap.]) }
 }
-
+#show: super-plus-as-dagger
 
 #pagebreak()
 #include("intro.typ")
