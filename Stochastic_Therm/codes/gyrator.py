@@ -145,5 +145,124 @@ def angularmomentum(trajectory):
     L = x*py - y*px
     return L
 
+# @njit
+def odangularmomentum(x,y,dt):
+    vx = np.diff(x)/dt
+    vy = np.diff(y)/dt
+    L = x[:-1]*vy - y[:-1]*vx
+    return L
+
+def theoangularmomentum(k, u, eta, m, T):
+    T1 = T[0]
+    T2 = T[1]
+    diffT = T2 - T1
+    L = (eta*m*u*diffT)/(eta*k*eta + u*u*m )
+    return L
+def potentialbr(x, y, k, alpha):
+    """
+    Potential for Brownian gyrator: U(x,y) = (1/2)k(x² + y²) + αxy
+    """
+    return 0.5 * k * (x**2 + y**2) + alpha * x * y
+
+# Generate potential contour data
+def generate_potential_grid(k, alpha, x_range, y_range, n_points=100):
+    """
+    Generate grid for potential contour plot
+    """
+    x = np.linspace(x_range[0], x_range[1], n_points)
+    y = np.linspace(y_range[0], y_range[1], n_points)
+    X, Y = np.meshgrid(x, y)
+    Z = potentialbr(X, Y, k, alpha)
+    return X, Y, Z
+
+
+##================================================================================================
+##------------ SOME SHIT FROM CHATGPT, ON EXACT SIMS USING CHOLESKY -----------------------------=
+##================================================================================================
+
+# import numpy as np
+import scipy.linalg
+# from numba import njit
+
+def exact_ubgyrator(k, alpha, m, T, eta, ini, dt, nsteps):
+    """
+    Exact simulation of the underdamped Brownian gyrator.
     
+    Parameters
+    ----------
+    k : float
+        Stiffness of the isotropic harmonic part.
+    alpha : float
+        Coupling strength (off‑diagonal potential term).
+    m : float
+        Mass of the particle.
+    T : array_like (2,)
+        Temperatures [Tx, Ty] of the two heat baths.
+    eta : float
+        Friction coefficient (same for both directions).
+    ini : array_like (4,)
+        Initial state [x, y, vx, vy].
+    dt : float
+        Time step.
+    nsteps : int
+        Number of steps.
+
+    Returns
+    -------
+    traj : ndarray, shape (nsteps, 4)
+        Trajectory containing [x, y, vx, vy] at each time step.
+    """
+    # --- Build the drift matrix A and diffusion matrix B ---
+    A = np.zeros((4, 4))
+    A[0, 2] = 1.0 / m
+    A[1, 3] = 1.0 / m
+    A[2, 0] = -k
+    A[2, 1] = -alpha
+    A[2, 2] = -eta / m
+    A[3, 0] = -alpha
+    A[3, 1] = -k
+    A[3, 3] = -eta / m
+
+    B = np.zeros((4, 4))
+    B[2, 2] = np.sqrt(2.0 * T[0] * eta) / m
+    B[3, 3] = np.sqrt(2.0 * T[1] * eta) / m
+
+    # --- Precompute the exact discrete-time matrices ---
+    # 1. Matrix exponential of A * dt
+    M = scipy.linalg.expm(A * dt)
+
+    # 2. Stationary covariance of the continuous process (solve Lyapunov equation)
+    #    A @ Sigma_inf + Sigma_inf @ A.T + B @ B.T = 0
+    Q = B @ B.T
+    Sigma_inf = scipy.linalg.solve_continuous_lyapunov(A, -Q)
+
+    # 3. Covariance of the discrete noise: Sigma_zeta = Sigma_inf - M @ Sigma_inf @ M.T
+    Sigma_zeta = Sigma_inf - M @ Sigma_inf @ M.T
+
+    # 4. Cholesky factor of Sigma_zeta (for fast noise generation)
+    #    Add a tiny diagonal to guard against near-singularity
+    try:
+        L_zeta = np.linalg.cholesky(Sigma_zeta)
+    except np.linalg.LinAlgError:
+        eps = 1e-12
+        L_zeta = np.linalg.cholesky(Sigma_zeta + eps * np.eye(4))
+
+    # --- JIT-compiled simulation loop ---
+    # @njit
+   
+
+    return M , L_zeta
+
+@njit
+def simulate(ini, M, L_zeta, nsteps):
+    traj = np.zeros((nsteps, 4))
+    ini = np.array(ini)
+    traj[0] = ini
+    state = ini.copy()
+    for i in range(1, nsteps):
+        xi = np.random.normal(0,1,(4,))              # standard normal vector
+        noise = L_zeta @ xi
+        state = M @ state + noise
+        traj[i] = state
+    return traj 
     

@@ -4,6 +4,7 @@
 #import "@preview/i-figured:0.2.4"
 #show: thmrules
 
+#import "@preview/cetz:0.3.4"
 #import "@preview/codly:1.3.0": *
 #import "@preview/codly-languages:0.1.1": *
 #show: codly-init.with()

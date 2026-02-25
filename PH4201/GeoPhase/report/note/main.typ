@@ -18,11 +18,11 @@
 
 // Document type for this template
 #show: tuw-thesis.with(
-  header-title: "Mach-Zehnder Interferometer",
+  header-title: "Pancharatnam Phase",
   lang: "en",
 )
 #maketitle(
-  title: "Mach-Zehnder Interferometer: Measurement of Refractive Index of Air",
+  title: "Observation of Pancharatnam-Berry Phase in Polarized Light",
   thesis-type: [PH4201: Adv. Optics Lab Report],
   authors: (
     (
