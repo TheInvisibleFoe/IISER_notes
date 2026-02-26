@@ -16,7 +16,7 @@
 
 = Aim
 
-In this experiment, we will use the Michelson Interferometer to demonstrate the Pancharatnam-Berry phase in polarized light. 
+In this experiment, we will use the Michelson Interferometer to demonstrate the Pancharatnam-Berry phase in polarized light.
 
 = Materials required
 
@@ -35,34 +35,20 @@ In this experiment, we will use the Michelson Interferometer to demonstrate the 
 
 #include "analysis.typ"
 
-= Discussion
-
 == Sources of error
-
-Since refractivity of air is on the order of $10^(-6)$, the experiment is a delicate one and is susceptible to a number of random and systematic errors that will be discussed below:
-
-+ *Adiabatic heating*: Introduction of air into the pressure chamber causes adiabatic heating of the air inside. As a result, the temperature inside the chamber is slightly higher than the ambient temperature. Since refractivity is inversely proportional to temperature, this causes a systematic underestimation of the refractive index of air.
-
-+ *Environmental changes in the composition of air*: The composition of the air in the room is subject to changes, as experimenters breathing near the setup can increase the concentration of carbon dioxide and water vapor locally. Since all these components have different specific refractivities, error is introduced in the calculated value of the refractive index.
-+ *Geometric errors*: The alignment of the interferometer is a source of error, which can cause the fringes to be non-parallel. In the case of circular fringes, misalignment can cause the center of the rings to shift, or concentric rings to distort.
-+ *Fringe counting error*: The dominant source of error in the experiment is, as mentioned before, the uncertainty in fringe shift counting. This can be mitigated or atleast estimated more conservatively if we have access to an electronic system to determine contrast on the interference pattern.
-+ *Secondary reflections*: Observation of faint secondary fringes due to reflections from the surfaces of the beamsplitters and lenses can cause contrast reduction.
-
-+ *Sphygmomanometer error*: The pressure gauge relies on a two way valve system to measure the pressure difference. As a result, the pressure fluctuates at lower pressures, causing uncertainty in the pressure measurement.
-
-== Inability to observe complementarity
-
-In carrying out the last aim of the experiment, it was noticed that the phase inversion expected on the center of the ring fringes on each detector was not reliably visible. While no single reason could be isolated, here are some possible reasons for this:
-
-+ *Plate beamsplitters are not ideal*: Since we are using a laser diode, the light is atleast slightly polarized. This, combined with the non-ideal nature of the beamsplitters make the phase shift on air-dielectric reflection a function of polarization, angle of incidence, and coating quality. This partial phase shift induced will result in the fringes not being exactly complementary.
-
-+ The usage of two lenses also increases the effect of jitters on the interference pattern. This can destabilize the patterns and make the phase inversion difficult to resolve.
-+ Asymmetric splitting at the second beamsplitter can cause a differential phase visibility on the two detector screens. Combined with the comparitively low resolution of the human eye and the low contrast, the makes the center spot difficult to resolve.
-+ Speckle effects due to spatial coherence of the diode laser may also reduce resolvability of the center rings.
-
++ The Michelson Interferometer is very sensitive to vibrations and air currents, which can cause the interference pattern to shift and make it difficult to obtain clear fringes. This can lead to errors in counting the fringe shifts.
++ The beam splitter causes inadvertent reflections, which can interfere with the main beams and cause additional fringes that can be mistaken for the main interference pattern. This can again lead to errors in counting the fringe shifts.
++ The quarter waveplates may not be perfectly aligned, which can affect the polarization state of the light and lead to errors in the observed fringe shifts. This can be mitigated by carefully aligning the quarter waveplates and ensuring that they are at the correct angles.
++ One of the quarter waveplates is more tilted with respect to the vertical axis, which causes more wavefronts to interfere with each other and can lead to anomalous fringe shifts. This can be mititgated by fixing the quarter waveplate and not rotating it, and instead rotating the other quarter waveplate to vary the angle $beta$.
++ Impurities and scratches on the beam splitter distort fringe visibility and can lead to errors in counting the fringe shifts. This can be mitigated by using a clean and high-quality beam splitter.
 
 = Conclusion
 
-The refractive index of air was determined to be $1.000248 plus.minus 0.000006$. This is in good agreement with the accepted value of $1.000293$. Spherical fringes were obtained, but a demonstration of the complementary nature of the center spot was not reliably shown.
+The Pancharatnam-Berry phase is a geometric phase that arises in polarized light when it undergoes a cyclic evolution in the polarization state. In this experiment, we used a Michelson Interferometer to demonstrate the presence of the Pancharatnam-Berry phase in polarized light. We observed that the fringe shift in the interference pattern is proportional to the angle $beta$ of the second quarter waveplate. The proportionality constant was found to be $1.90 pm 0.04, 2.14 pm 0.13$ and $2.17 pm 0.03$ for the three data sets, which is in good agreement with the theoretical prediction of $2$.
 
+= Discussion
+One way to improve the experiment would be to use a more stable setup that is less sensitive to vibrations and air currents. This could involve using a Mach Zender Interferometer instead of a Michelson Interferometer, as the Mach Zender Interferometer is less sensitive to vibrations and air currents. Additionally, using a more stable platform for the interferometer and isolating it from external vibrations could also help improve the results. However, this would cause an issue, we would require two more quarter waveplates. Two pairs of quarter waveplates have to be in sync with each other, since the light has to virtually retrace its path after hitting the mirror in the Mach Zender Interferometer, which can be difficult to achieve in practice. The Michelson Interferometer, on the other hand, only requires one pair of quarter waveplates, where the light already retraces its path after hitting the mirror, which makes it easier to set up and align. Thus, while using a Mach Zender Interferometer could potentially improve the stability of the experiment, it would also introduce additional complexities in terms of alignment and synchronization of the quarter waveplates.
 
+One could also use better quarter waveplates, ones with lower reflecton coefficients and better quality, to reduce the anomalous fringe shifts caused by the tilted quarter waveplate. 
+
+One anomaly that we observed was that the fringe shifts were not completely linear with respect to the angle $beta$ of the second quarter waveplate. Periodically, the fringes would move in the opposite direction slightly before continuing to shift in the expected direction. However, these slight variations are not resolvable in the plot since these happen periodically and are smoothened out. We still do not know why this happens, but it could be due to the fact that the second quarter waveplate is more tilted with respect to the vertical axis.
