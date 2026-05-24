@@ -1,0 +1,1 @@
+This is my attempt at writing solutions to the problems in the book Elements of Non Equilibrium Statistical Mechanics by V Balakrishnan. LOL, that is a monumental task, and I have very little time and motivation to do it, but I will try my best. I want to learn NESM formally once, hence this painful undertaking. Enjoy!
